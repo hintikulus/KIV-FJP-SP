@@ -1,0 +1,49 @@
+x == 2 - x je rovno 2
+x > 2 - x je vetsi nez 2
+x < 2 - x je mensi nez 2
+x >= 2 - x je vetsi rovno nez 2
+x <= 2 - x je mensi rovno nez 2
+
+AND - a zaroven
+OR - nebo
+
+true - pravda
+false - nepravda
+
++ - plus
+- - minus
+/ - deleno
+* - krat
+
+<navr. typ> <nazev>(...) {
+...
+}
+
+char - znak
+int - cislo
+void - nic
+
+# konstanta
+necht cislo x jest 2;
+
+# promenna
+budiz cislo x jest 2;
+
+# while
+dokud(x je 2) tak {
+
+}
+
+# do-while
+delej {
+} dokud (x je vetsi nez 2);
+
+# podminka
+kdyz (x je vetsi rovno nez 2) tak {
+
+} nebo kdyz (...) tak {
+
+} nebo {
+
+}
+
