@@ -8,10 +8,12 @@ ASSIGN: 'prave rovno';
 DECLARATION: 'existuje';
 
 /* Typy */
-BOOLEAN : 'boolean';
+BOOLEAN : 'vyrok';
 INT : 'cislo';
 VOID : 'nic';
-METHOD_KEYWORD : 'metoda';
+METHOD_KEYWORD : 'heledtese';
+PROGRAM_KEY_WORD: 'cesky program';
+
 /* Operatory */
 MULTIPLY : 'krat';
 DIVIDE : 'deleno';
@@ -32,6 +34,10 @@ OR: 'nebo';
 IF : 'kdyz';
 SO : 'tak';
 RETURN: 'vrat';
+SWITCH: 'prepinej';
+CASE: 'pripad';
+DEFAULT: 'jinak';
+BREAK: 'zastav';
 
 /* Cyklus */
 WHILE : 'dokud';
@@ -39,6 +45,7 @@ DO : 'delej';
 FOR : 'pro';
 FROM : 'od';
 TO: 'do';
+DOUBLE_COMMA: ':';
 
 L_ROUND_BRACE: '(';
 R_ROUND_BRACE: ')';
@@ -55,15 +62,15 @@ NEGATIVE: 'zaporne';
 
 /* Literály */
 
-fragment DIGIT : [0-9]+ ;
+fragment DIGIT : [0-9] ;
 
 fragment LOWER_CASE : [a-z] ;
 
 fragment UPPER_CASE : [A-Z] ;
 
-WORD : (LOWER_CASE | UPPER_CASE | '_')+ ;
+DECIMAL : DIGIT+ ;
 
-DECIMAL : DIGIT ;
+WORD : (LOWER_CASE | UPPER_CASE | DIGIT | '_')+ ;
 
 WHITESPACE : [ \r\t\n]+ -> skip;
 
@@ -79,9 +86,11 @@ varType: INT | BOOLEAN;
 
 numberSignChar: POSITIVE | MINUS;
 
-value: numberSignChar? DECIMAL | booleanValue;
+decimalValue: numberSignChar? DECIMAL;
 
-identifier: WORD (WORD | DECIMAL)*;
+value: decimalValue | booleanValue;
+
+identifier: WORD;
 
 paralelDeclaration
   : ASSIGN identifier
@@ -103,9 +112,7 @@ variableDeclaration: (localVariableDeclaration | constVariableDeclaration);
 
 variableAssignment: identifier ASSIGN expressionBody SEMI;
 
-program
-  : block
-  ;
+program: PROGRAM_KEY_WORD block;
 
 block
   : L_CURLY_BRACE blockStatement? R_CURLY_BRACE
@@ -140,9 +147,12 @@ statement
   | methodCall SEMI                                        #statementMethodCall
   | variableAssignment                                      #statementAssigment
   | variableDeclaration                                    #statementVariableDeclaration
+  | switchHead #switch
+  | returnStatement #statementReturn
+  | BREAK SEMI #statementBreak
   ;
 
-expression: L_ROUND_BRACE expressionBody R_ROUND_BRACE;
+expression: expressionBody;
 
 expressionBody
   : value                                                          #exprPossibleValue
@@ -155,19 +165,23 @@ expressionBody
   | L_ROUND_BRACE expressionBody R_ROUND_BRACE                              #exprPar
   | NEGATION expressionBody                                                 #exprNeg
   | MINUS expressionBody                                                    #exprMinus
-  | PLUS expressionBody                                                     #exprPlus
+  | PLUS expressionBody  #exprPlus
+  | ternal  #ternalOperator
   ;
 
 methodDeclaration
-  : functionReturnType METHOD_KEYWORD identifier L_ROUND_BRACE (methodParameter (COMMA methodParameter)*)? R_ROUND_BRACE methodBody
+  : METHOD_KEYWORD functionReturnType identifier L_ROUND_BRACE (methodParameter (COMMA methodParameter)*)? R_ROUND_BRACE methodBody
   ;
 
 methodParameter
   : varType identifier
   ;
 
+returnStatement:
+    RETURN (expressionBody)? SEMI;
+
 methodBody
-  : L_CURLY_BRACE blockBody? (RETURN expressionBody SEMI)? R_CURLY_BRACE
+  : L_CURLY_BRACE blockBody? (returnStatement)? R_CURLY_BRACE
   ;
 
 methodCall
@@ -177,3 +191,17 @@ methodCall
 methodCallParameter
   : expressionBody
   ;
+
+switchHead: SWITCH expression switchBlock;
+
+switchBlock: L_CURLY_BRACE (caseBlock)* (defaultBlock)? R_CURLY_BRACE;
+
+caseBlock: CASE value SO blockBody;
+
+defaultBlock: DEFAULT SO blockBody;
+
+ternal: L_ROUND_BRACE expression R_ROUND_BRACE SO expression DEFAULT expression;
+
+/*
+existuj x prave rovno (c rovno pravda) tak c prave rovno 4 jinak c prave rovno 0 budiz
+*/
