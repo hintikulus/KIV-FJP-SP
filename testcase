@@ -1,0 +1,35 @@
+cesky program {
+    necht existuje cislo xuiui prave rovno 3 budiz
+
+    existuje cislo x prave rovno y prave rovno z prave rovno zz budiz
+
+    existuje cislo a prave rovno metoda(3, x, metoda(x, y, lez)) budiz
+
+    kdyz x mensi nez 2 tak {
+        x prave rovno 5 budiz
+    }
+
+    dokud x rovno 5 tak delej {
+        x prave rovno x plus 1 budiz
+    }
+
+    delej {
+        x prave rovno 2 plus x budiz
+    } dokud x vetsi rovno nez 2 a zaroven x mensi rovno nez 6 budiz
+
+    heledtese cislo metoda(cislo x, vyrok y) {
+        vrat y budiz
+    }
+
+    prepinej x {
+        pripad pravda tak
+            vrat budiz
+        pripad 6 tak
+            vrat 6 budiz
+        jinak tak
+            zastav budiz
+    }
+
+    #x je rovno y ? neco : neco
+    existuje vyrok x prave rovno (c rovno pravda) tak c rovno 4 jinak c rovno 0 budiz
+}
