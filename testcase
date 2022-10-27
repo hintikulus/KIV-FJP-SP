@@ -31,5 +31,9 @@ cesky program {
     }
 
     #x je rovno y ? neco : neco
-    existuje vyrok x prave rovno (c rovno pravda) tak c rovno 4 jinak c rovno 0 budiz
+    c
+
+    #todo upravit
+    pro (x od 5 do 6) delej
+    {
 }
