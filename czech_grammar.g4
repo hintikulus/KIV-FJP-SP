@@ -11,7 +11,7 @@ DECLARATION: 'existuje';
 BOOLEAN : 'vyrok';
 INT : 'cislo';
 VOID : 'nic';
-METHOD_KEYWORD : 'heledtese';
+METHOD_KEYWORD : 'spageta';
 
 /* Operatory */
 MULTIPLY : 'krat';
