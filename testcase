@@ -30,10 +30,10 @@ cesky program {
             zastav budiz
     }
 
-    #x je rovno y ? neco : neco
-    c
+    #x je rovno y ? neco : neco delej
 
     #todo upravit
     pro (x od 5 do 6) delej
     {
+    }
 }

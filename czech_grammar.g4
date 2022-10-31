@@ -38,6 +38,7 @@ SWITCH: 'prepinej';
 CASE: 'pripad';
 DEFAULT: 'jinak';
 BREAK: 'zastav';
+TERNAL: 'za podminky';
 
 /* Cyklus */
 WHILE : 'dokud';
@@ -96,103 +97,94 @@ paralelDeclaration
   : ASSIGN identifier
   ;
 
+/* Celé číslo */
 decimalVariable: INT identifier (paralelDeclaration)* (ASSIGN numberSignChar? decimalExpression)?;
 
-decimalExpression: numberSignChar? DECIMAL | methodCall | identifier | expressionBody;
+decimalExpression: numberSignChar? DECIMAL | methodCall | identifier | expression;
 
-boolVariable: BOOLEAN identifier (paralelDeclaration)* ASSIGN booleanExpression;
+/* Pravdivostni hodnota */
+booleanVariable: BOOLEAN identifier (paralelDeclaration)* ASSIGN booleanExpression;
 
-booleanExpression: booleanValue | methodCall | identifier | expressionBody;
+booleanExpression: booleanValue | methodCall | identifier | expression;
 
-localVariableDeclaration: DECLARATION (decimalVariable | boolVariable) SEMI;
+/* Definice proměnných */
+localVariableDeclaration: DECLARATION (decimalVariable | booleanVariable) SEMI;
 
 constVariableDeclaration: FINAL localVariableDeclaration;
 
 variableDeclaration: (localVariableDeclaration | constVariableDeclaration);
 
-variableAssignment: identifier ASSIGN expressionBody SEMI;
+/* Přiřazení hodnoty proměnné */
+variableAssignment: identifier ASSIGN expression SEMI;
 
+/* Hlavni block programu */
 program: PROGRAM_KEY_WORD block;
 
 block
-  : L_CURLY_BRACE blockStatement? R_CURLY_BRACE
-  ;
+    : L_CURLY_BRACE blockStatement? R_CURLY_BRACE
+    ;
 
 body
-  : L_CURLY_BRACE blockBody? R_CURLY_BRACE
-  ;
+    : L_CURLY_BRACE blockBody? R_CURLY_BRACE
+    ;
 
 blockStatement
-  : (statement
-  | methodDeclaration)+
-  ;
+    : (statement | methodDeclaration)+
+    ;
 
-blockBody
-  : (statement)*
-  ;
+blockBody: (statement)*;
 
-ifstatement:
-    IF expression SO body (elsestatement)?;
+/* Konstrukce */
+statement
+    : IF expression SO body (elsestatement)? #statementIf
+    | WHILE expression SO DO body                                             #statementWhile
+    | DO body WHILE expression SEMI                                           #statementDoWhile
+    | FOR identifier FROM decimalExpression TO decimalExpression DO body      #statementFor
+    | methodCall SEMI                                                         #statementMethodCall
+    | variableAssignment                                                      #statementAssigment
+    | variableDeclaration                                                     #statementVariableDeclaration
+    | SWITCH expression switchBlock                                           #switchStatement
+    | returnStatement #statementReturn
+    | BREAK SEMI #statementBreak
+    ;
+
+/* Výrazy */
+expression
+    : value                                                         #exprPossibleValue
+    | identifier                                                    #exprIdentifier
+    | methodCall                                                    #exprMethodCall
+    | expression op=(MULTIPLY | DIVIDE | MODULO) expression         #exprMultipli
+    | expression op=(PLUS | MINUS) expression                       #exprAdditive
+    | expression op=(GREATER_THAN | GREATER_EQUALS | LESS_THAN | LESS_EQUALS | EQUALS | NOT_EQUALS) expression    #exprRelational
+    | expression op=(AND | OR) expression                           #exprLogical
+    | L_ROUND_BRACE expression R_ROUND_BRACE                        #exprPar
+    | NEGATION expression                                           #exprNeg
+    | MINUS expression                                              #exprMinus
+    | PLUS expression                                               #exprPlus
+    | TERNAL expression SO expression DEFAULT expression            #ternalOperator
+    ;
+
+methodDeclaration
+    : METHOD_KEYWORD functionReturnType identifier L_ROUND_BRACE (methodParameter (COMMA methodParameter)*)? R_ROUND_BRACE methodBody
+    ;
+
+methodParameter
+    : varType identifier
+    ;
+
 elsestatement:
     OR body;
 
-forexpression:
-    L_ROUND_BRACE identifier FROM decimalExpression TO decimalExpression R_ROUND_BRACE;
-
-statement
-  : ifstatement                        #statementIf
-  | WHILE expression SO DO body                                  #statementWhile
-  | DO body WHILE expression SEMI                               #statementDoWhile
-  | FOR forexpression DO body                                   #statementFor
-  | methodCall SEMI                                        #statementMethodCall
-  | variableAssignment                                      #statementAssigment
-  | variableDeclaration                                    #statementVariableDeclaration
-  | switchHead #switch
-  | returnStatement #statementReturn
-  | BREAK SEMI #statementBreak
-  ;
-
-expression: expressionBody;
-
-expressionBody
-  : value                                                          #exprPossibleValue
-  | identifier                                                              #exprIdentifier
-  | methodCall                                                              #exprMethodCall
-  | expressionBody op=(MULTIPLY | DIVIDE | MODULO) expressionBody                     #exprMultipli
-  | expressionBody op=(PLUS | MINUS) expressionBody                         #exprAdditive
-  | expressionBody op=(GREATER_THAN | GREATER_EQUALS | LESS_THAN | LESS_EQUALS | EQUALS | NOT_EQUALS) expressionBody    #exprRelational
-  | expressionBody op=(AND | OR) expressionBody                             #exprLogical
-  | L_ROUND_BRACE expressionBody R_ROUND_BRACE                              #exprPar
-  | NEGATION expressionBody                                                 #exprNeg
-  | MINUS expressionBody                                                    #exprMinus
-  | PLUS expressionBody  #exprPlus
-  | ternal  #ternalOperator
-  ;
-
-methodDeclaration
-  : METHOD_KEYWORD functionReturnType identifier L_ROUND_BRACE (methodParameter (COMMA methodParameter)*)? R_ROUND_BRACE methodBody
-  ;
-
-methodParameter
-  : varType identifier
-  ;
-
 returnStatement:
-    RETURN (expressionBody)? SEMI;
+    RETURN (expression)? SEMI;
 
 methodBody
-  : L_CURLY_BRACE blockBody? (returnStatement)? R_CURLY_BRACE
-  ;
+    : L_CURLY_BRACE blockBody? (returnStatement)? R_CURLY_BRACE
+    ;
 
 methodCall
-  : identifier L_ROUND_BRACE (methodCallParameter (COMMA methodCallParameter)*)? R_ROUND_BRACE
-  ;
-
-methodCallParameter
-  : expressionBody
-  ;
-
-switchHead: SWITCH expression switchBlock;
+    : identifier L_ROUND_BRACE (expression (COMMA expression)*)? R_ROUND_BRACE
+    ;
 
 switchBlock: L_CURLY_BRACE (caseBlock)* (defaultBlock)? R_CURLY_BRACE;
 
@@ -200,8 +192,6 @@ caseBlock: CASE value SO blockBody;
 
 defaultBlock: DEFAULT SO blockBody;
 
-ternal: L_ROUND_BRACE expression R_ROUND_BRACE SO expression DEFAULT expression;
-
 /*
 existuj x prave rovno (c rovno pravda) tak c prave rovno 4 jinak c prave rovno 0 budiz
-*/
+*/0
