@@ -1,4 +1,4 @@
-cesky program {
+delej {
     necht existuje cislo xuiui prave rovno 3 budiz
 
     existuje cislo x prave rovno y prave rovno z prave rovno zz budiz
@@ -30,10 +30,10 @@ cesky program {
             zastav budiz
     }
 
-    #x je rovno y ? neco : neco delej
+    existuje cislo x prave rovno za podminky (x rovno y) tak neco jinak neco budiz
 
     #todo upravit
-    pro (x od 5 do 6) delej
+    pro x od 5 do 6 delej
     {
     }
 }

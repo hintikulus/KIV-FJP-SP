@@ -12,7 +12,6 @@ BOOLEAN : 'vyrok';
 INT : 'cislo';
 VOID : 'nic';
 METHOD_KEYWORD : 'heledtese';
-PROGRAM_KEY_WORD: 'cesky program';
 
 /* Operatory */
 MULTIPLY : 'krat';
@@ -118,7 +117,7 @@ variableDeclaration: (localVariableDeclaration | constVariableDeclaration);
 variableAssignment: identifier ASSIGN expression SEMI;
 
 /* Hlavni block programu */
-program: PROGRAM_KEY_WORD block;
+program: DO block;
 
 block
     : L_CURLY_BRACE blockStatement? R_CURLY_BRACE
@@ -194,4 +193,4 @@ defaultBlock: DEFAULT SO blockBody;
 
 /*
 existuj x prave rovno (c rovno pravda) tak c prave rovno 4 jinak c prave rovno 0 budiz
-*/0
+*/
