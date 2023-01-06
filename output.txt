@@ -1,0 +1,14 @@
+0	JMP	0	1
+1	INT	0	4
+2	LIT	0	5
+3	STO	0	3
+4	RET	0	0
+
+
+0	JMP	0	1
+1	INT	0	4
+2	LIT	0	5
+3	STO	0	3
+4	RET	0	0
+
+
