@@ -78,6 +78,9 @@ LINE_COMMENT : '#' ~[\r\n]* -> skip;
 
 /* Parser */
 
+/* Hlavni block programu */
+program: DO block;
+
 functionReturnType : INT | BOOLEAN | VOID;
 
 booleanValue : TRUE | FALSE;
@@ -115,9 +118,6 @@ variableDeclaration: (localVariableDeclaration | constVariableDeclaration);
 
 /* Přiřazení hodnoty proměnné */
 variableAssignment: identifier ASSIGN expression SEMI;
-
-/* Hlavni block programu */
-program: DO block;
 
 block
     : L_CURLY_BRACE blockStatement? R_CURLY_BRACE
