@@ -4,68 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="">
+    <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="uprava jazyka">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CzechGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/CzechGrammar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammar.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammar.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarBaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarBaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarLexer.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarLexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarVisitor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/ErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/ErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/BlockCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/BlockCompiler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/ExpressionCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/ExpressionCompiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/enums/EMethodReturnType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/enums/EMethodReturnType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/enums/EVariableType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/enums/EVariableType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorArithmetic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorAssignedVariableNotExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorAssignedVariableNotExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorConstantAssigment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorConstantAssigment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorInvalidParametersCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorInvalidParametersCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMethodAlreadyExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodNotExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMethodNotExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchExpressionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchExpressionResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodAndCallParameterTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodAndCallParameterTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodCallReturnType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodCallReturnType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesVariable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorSwitchMultipleDefaultBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorSwitchMultipleDefaultBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorVariableAlreadyExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableNotExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorVariableNotExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVoidMethodExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorVoidMethodExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/object/Control/ControlFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/control/ControlFor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/object/instruction/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/instruction/Instruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/MethodCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/MethodCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/Error.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorArithmetic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorAssignedVariableNotExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorConstantAssigment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorInvalidParametersCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodAlreadyExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodNotExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchExpressionResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodAndCallParameterTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodCallReturnType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorSwitchMultipleDefaultBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableAlreadyExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableNotExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVoidMethodExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/StatementVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/StatementVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SimpleJava-1.0-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SimpleJava-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/ErrorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/ErrorHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockCompiler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/enums/EMethodReturnType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/enums/EMethodReturnType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/enums/EVariableType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/enums/EVariableType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/Error.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorArithmetic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorArithmetic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorAssignedVariableNotExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorAssignedVariableNotExists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorConstantAssigment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorConstantAssigment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorInvalidParametersCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorInvalidParametersCount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodAlreadyExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodAlreadyExists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodNotExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodNotExists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodAndCallParameterTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodAndCallParameterTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodCallReturnType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodCallReturnType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesVariable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesVariable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorSwitchMultipleDefaultBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorSwitchMultipleDefaultBlock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableAlreadyExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableAlreadyExists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableNotExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableNotExists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVoidMethodExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVoidMethodExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/object/instruction/Instruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/object/instruction/Instruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/MethodCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/MethodCompiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/Error.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorArithmetic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorAssignedVariableNotExists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorConstantAssigment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorInvalidParametersCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodAlreadyExists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodNotExists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchExpressionResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodAndCallParameterTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodCallReturnType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesVariable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorSwitchMultipleDefaultBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableAlreadyExists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableNotExists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVoidMethodExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/StatementVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/StatementVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +142,14 @@
       <workItem from="1673009473926" duration="2567000" />
       <workItem from="1673012848010" duration="10140000" />
     </task>
+    <task id="LOCAL-00001" summary="uprava jazyka">
+      <created>1673280083615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673280083615</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +165,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uprava jazyka" />
+    <option name="LAST_COMMIT_MESSAGE" value="uprava jazyka" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

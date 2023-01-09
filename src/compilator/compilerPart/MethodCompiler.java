@@ -1,8 +1,6 @@
 package compilator.compilerPart;
 
 import compilator.enums.EInstruction;
-import compilator.error.ErrorMethodAlreadyExists;
-import compilator.error.ErrorVariableAlreadyExists;
 import compilator.object.method.Method;
 import compilator.object.method.MethodDeclarationParameter;
 import compilator.object.symbolTable.SymbolTableItem;
@@ -31,7 +29,7 @@ public class MethodCompiler extends BaseCompiler
         // check if method exists
         if (this.isInSymbolTable(this.method.getIdentifier()))
         {
-            this.getErrorHandler().throwError(new ErrorMethodAlreadyExists(this.method.getIdentifier(), this.method.getLine()));
+            this.getErrorHandler().throwErrorMethodAlreadyExistsError(this.method.getIdentifier(), this.method.getLine());
         }
 
         // new scope, new stack pointer
@@ -104,7 +102,7 @@ public class MethodCompiler extends BaseCompiler
         {
             if (this.isInSymbolTable(parameters.get(i).getIdentifier()))
             {
-                this.getErrorHandler().throwError(new ErrorVariableAlreadyExists(parameters.get(i).getIdentifier(), this.method.getLine()));
+                this.getErrorHandler().throwErrorVariableAlreadyExists(parameters.get(i).getIdentifier(), this.method.getLine());
             }
 
             this.addInstruction(EInstruction.LOD, 0, i - parameters.size());

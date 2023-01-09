@@ -4,7 +4,6 @@ package compilator.visitor;
 import compilator.ErrorHandler;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
-import compilator.error.ErrorSwitchMultipleDefaultBlock;
 import compilator.object.BlockStatement;
 import compilator.object.control.ControlFor;
 import compilator.object.method.MethodCall;
@@ -118,7 +117,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
             {
                 if (defaultBlock != null)
                 {
-                    ErrorHandler.getInstance().throwError(new ErrorSwitchMultipleDefaultBlock(switchBlockStatement.start.getLine()));
+                    ErrorHandler.getInstance().throwErrorSwitchMultipleDefaultBlock(switchBlockStatement.start.getLine());
                 }
 
                 BlockStatement body = switchBlockStatement.body().blockBody() != null ? new BlockBodyVisitor().visit(switchBlockStatement.body().blockBody()) : null;

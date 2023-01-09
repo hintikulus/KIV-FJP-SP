@@ -1,7 +1,6 @@
 package compilator.compilerPart;
 
 import compilator.enums.*;
-import compilator.error.*;
 import compilator.object.expression.*;
 import compilator.object.symbolTable.SymbolTableItem;
 import compilator.object.Value;
@@ -66,7 +65,7 @@ public class ExpressionCompiler extends BaseCompiler
             // if expected return type not match with result type
             if (type != this.resultType)
             {
-                this.getErrorHandler().throwError(new ErrorMismatchExpressionResult(this.resultType.toString(), type.toString(), this.expression.getLine()));
+                this.getErrorHandler().throwErrorMismatchExpressionResult(this.resultType.toString(), type.toString(), this.expression.getLine());
             }
         }
     }
@@ -137,7 +136,7 @@ public class ExpressionCompiler extends BaseCompiler
         }
         else
         {
-            this.getErrorHandler().throwError(new ErrorVariableNotExists(identifier, expression.getLine()));
+            this.getErrorHandler().throwVariableNotExistsError(identifier, expression.getLine());
         }
 
         return null;
@@ -254,7 +253,7 @@ public class ExpressionCompiler extends BaseCompiler
         // multiple logical negation
         if (expression.getType() == expression.getExpression().getType())
         {
-            this.getErrorHandler().throwError(new ErrorArithmetic(EOperatorLogical.NEGATION.toString(), expression.getExpression().getLine()));
+            this.getErrorHandler().throwArithmeticError(EOperatorLogical.NEGATION.toString(), expression.getExpression().getLine());
         }
 
         EVariableType expressionType = this.processExpression(expression.getExpression());
@@ -277,7 +276,7 @@ public class ExpressionCompiler extends BaseCompiler
         // multiple number negation
         if (expression.getType() == expression.getExpression().getType())
         {
-            this.getErrorHandler().throwError(new ErrorArithmetic(EOperatorAdditive.MINUS.toString(), expression.getExpression().getLine()));
+            this.getErrorHandler().throwArithmeticError(EOperatorAdditive.MINUS.toString(), expression.getExpression().getLine());
         }
 
         EVariableType expressionType = this.processExpression(expression.getExpression());
@@ -300,7 +299,7 @@ public class ExpressionCompiler extends BaseCompiler
         // multiple number negation
         if (expression.getType() == expression.getExpression().getType())
         {
-            this.getErrorHandler().throwError(new ErrorArithmetic(EOperatorAdditive.PLUS.toString(), expression.getExpression().getLine()));
+            this.getErrorHandler().throwArithmeticError(EOperatorAdditive.PLUS.toString(), expression.getExpression().getLine());
         }
 
         EVariableType expressionType = this.processExpression(expression.getExpression());
@@ -329,13 +328,13 @@ public class ExpressionCompiler extends BaseCompiler
     {
         if (expression.getMethodCall().getExpectedReturnType() == EMethodReturnType.VOID)
         {
-            this.getErrorHandler().throwError(new ErrorVoidMethodExpression(expression.getMethodCall().getIdentifier(), expression.getLine()));
+            this.getErrorHandler().throwVoidMethodExpressionError(expression.getMethodCall().getIdentifier(), expression.getLine());
         }
 
         // check if method exists in prototypes
         if (!this.getMethodPrototypes().containsKey(expression.getMethodCall().getIdentifier()))
         {
-            this.getErrorHandler().throwError(new ErrorMethodNotExists(expression.getMethodCall().getIdentifier(), expression.getMethodCall().getLine()));
+            this.getErrorHandler().throwErrorMethodNotExists(expression.getMethodCall().getIdentifier(), expression.getMethodCall().getLine());
         }
 
         // set up return type of method call from method prototypes
@@ -357,7 +356,7 @@ public class ExpressionCompiler extends BaseCompiler
     {
         if (type1 != expected || type2 != expected)
         {
-            this.getErrorHandler().throwError(new ErrorMismatchTypesExpression(expected.toString(), type1, type2, this.expression.getLine()));
+            this.getErrorHandler().throwErrorMismatchTypesExpression(expected.toString(), type1, type2, this.expression.getLine());
         }
     }
 
@@ -370,7 +369,7 @@ public class ExpressionCompiler extends BaseCompiler
     {
         if (type != expected)
         {
-            this.getErrorHandler().throwError(new ErrorMismatchExpressionResult(expected.toString(), type.toString(), this.expression.getLine()));
+            this.getErrorHandler().throwErrorMismatchExpressionResult(expected.toString(), type.toString(), this.expression.getLine());
         }
     }
 
