@@ -6,6 +6,6 @@ public class ErrorSwitchMultipleDefaultBlock extends Error
 {
     public ErrorSwitchMultipleDefaultBlock(int line)
     {
-        super("Error in switch structure. Switch can contain only one default block.", line, EErrorCode.ERROR_SWITCH_MULTIPLE_DEFAULT_BLOCK);
+        super("Prepinac muze mit pouze jeden 'v jinem pripade' blok.", line, EErrorCode.ERROR_SWITCH_MULTIPLE_DEFAULT_BLOCK);
     }
 }

@@ -357,7 +357,7 @@ public class ExpressionCompiler extends BaseCompiler
     {
         if (type1 != expected || type2 != expected)
         {
-            this.getErrorHandler().throwError(new ErrorMismatchTypesExpression(expected.toString(), type1.toString(), type2.toString(), this.expression.getLine()));
+            this.getErrorHandler().throwError(new ErrorMismatchTypesExpression(expected.toString(), type1, type2, this.expression.getLine()));
         }
     }
 

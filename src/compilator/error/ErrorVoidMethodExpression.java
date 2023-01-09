@@ -6,6 +6,6 @@ public class ErrorVoidMethodExpression extends Error
 {
     public ErrorVoidMethodExpression(String name, int line)
     {
-        super("Void method \"" + name + "\" can not be used in expression.", line, EErrorCode.ERROR_VOID_METHOD_EXPRESSION);
+        super("Spageta vracejici nic \"" + name + "\" nemuze byt pouzita ve vyrazu.", line, EErrorCode.ERROR_VOID_METHOD_EXPRESSION);
     }
 }

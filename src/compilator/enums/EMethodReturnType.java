@@ -2,7 +2,17 @@ package compilator.enums;
 
 public enum EMethodReturnType
 {
-    VOID,
-    BOOLEAN,
-    INT
+    VOID("nic"),
+    BOOLEAN("vyrok"),
+    INT("cislo");
+
+    private final String translation;
+
+    EMethodReturnType(String translation) {
+        this.translation = translation;
+    }
+
+    public String getTranslation() {
+        return translation;
+    }
 }

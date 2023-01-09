@@ -6,6 +6,6 @@ public class ErrorArithmetic extends Error
 {
     public ErrorArithmetic(String operator, int line)
     {
-        super("Invalid use of operator: " + operator + ". Multiple symbols can not be in row.", line, EErrorCode.ERROR_ARITHMETIC);
+        super("Neplatne pouziti operatoru: " + operator + ". Nemuze byt vice stejnych operatoru v jednom radku.", line, EErrorCode.ERROR_ARITHMETIC);
     }
 }

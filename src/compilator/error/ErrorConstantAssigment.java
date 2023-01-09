@@ -6,6 +6,6 @@ public class ErrorConstantAssigment extends Error
 {
     public ErrorConstantAssigment(String variable, int line)
     {
-        super("Variable \""+ variable +"\" is constant. Value can not be changed.", line, EErrorCode.ERROR_CONSTANT_ASSIGMENT);
+        super("Promenna \""+ variable +"\" je konstanta, a jeji hodnota nemuze byt menena.", line, EErrorCode.ERROR_CONSTANT_ASSIGMENT);
     }
 }

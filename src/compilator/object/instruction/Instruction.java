@@ -38,41 +38,6 @@ public class Instruction
         return this.rowId + "\t" + this.instruction + "\t" + this.level + "\t" + this.address + "\n";
     }
 
-    public EInstruction getInstruction()
-    {
-        return instruction;
-    }
-
-    public void setInstruction(EInstruction instruction)
-    {
-        this.instruction = instruction;
-    }
-
-    public int getRowId()
-    {
-        return rowId;
-    }
-
-    public void setRowId(int rowId)
-    {
-        this.rowId = rowId;
-    }
-
-    public int getLevel()
-    {
-        return level;
-    }
-
-    public void setLevel(int level)
-    {
-        this.level = level;
-    }
-
-    public int getAddress()
-    {
-        return address;
-    }
-
     public void setAddress(int address)
     {
         this.address = address;
@@ -98,13 +63,4 @@ public class Instruction
         return methodCall;
     }
 
-    public boolean isUpdatedCall()
-    {
-        return updatedCall;
-    }
-
-    public void setUpdatedCall(boolean updatedCall)
-    {
-        this.updatedCall = updatedCall;
-    }
 }

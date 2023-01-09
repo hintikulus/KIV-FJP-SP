@@ -10,7 +10,7 @@ INT   : 'cislo' ;
 /* condition */
 IF    : 'kdyz' ;
 ELSE  : 'jinak' ;
-SWITCH  : 'prepinej' ;
+SWITCH  : 'prepinej' ; // todo mozna pregenerovat a napsat prepinac, doresit nazev default vetve
 CASE  : 'pripad' ;
 DEFAULT : 'v jinem pripade' ;
 

@@ -6,6 +6,6 @@ public class ErrorVariableNotExists extends Error
 {
     public ErrorVariableNotExists(String value, int line)
     {
-        super("Variable " + value + " not exists", line, EErrorCode.ERROR_VARIABLE_NOT_EXISTS);
+        super("Promenna " + value + " neexistuje", line, EErrorCode.ERROR_VARIABLE_NOT_EXISTS);
     }
 }

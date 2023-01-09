@@ -1,16 +1,14 @@
 package compilator.error;
 
 import compilator.enums.EErrorCode;
+import compilator.enums.EVariableType;
 
-public class ErrorMismatchTypesExpression extends Error
-{
-    public ErrorMismatchTypesExpression(String expectedType, String type1, String type2, int line)
-    {
-        super("Mismatch expression result type. Got " + type1 + " and " + type2 + ". Both results should be type " + expectedType, line, EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
+public class ErrorMismatchTypesExpression extends Error {
+    public ErrorMismatchTypesExpression(String expectedType, EVariableType type1, EVariableType type2, int line) {
+        super("Neshoda navratovych typu vyrazu. Zadan " + type1.getTranslation() + " a " + type2.getTranslation() + ". Oba vysledky mohou byt " + expectedType, line, EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
     }
 
-    public ErrorMismatchTypesExpression(String expectedType, String type, int line)
-    {
-        super("Mismatch expression result type. Got " + type + ". Result should be type " + expectedType, line, EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
+    public ErrorMismatchTypesExpression(EVariableType expectedType, EVariableType type, int line) {
+        super("Neshoda navratovych typu vyrazu. Zadan " + type.getTranslation() + ". Ocekavany typ " + expectedType + ".", line, EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
     }
 }

@@ -7,6 +7,6 @@ public class ErrorMismatchMethodAndCallParameterTypes extends Error
 {
     public ErrorMismatchMethodAndCallParameterTypes(String name, EVariableType need, EVariableType got, int index, int line)
     {
-        super("Invalid call of method \"" + name + "\". " + index + ". parameter should be " + need + ", got " + got + ".", line, EErrorCode.ERROR_MISMATCH_METHOD_AND_CALL_PARAMETER_RETURN_TYPE);
+        super("Neshoda pri volani spagety s identifikatorem \"" + name + "\". " + index + ". parametr ma byt " + need.getTranslation() + ", ale je " + got.getTranslation() + ".", line, EErrorCode.ERROR_MISMATCH_METHOD_AND_CALL_PARAMETER_RETURN_TYPE);
     }
 }

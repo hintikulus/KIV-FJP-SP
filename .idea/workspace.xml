@@ -5,84 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generate/CzechGrammarListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generate/CzechGrammarVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KIV-FJP-SP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KIV-FJP-SP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/czech_grammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/CzechGrammar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammar.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammar.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammarBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammarBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammarLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/CzechGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/czech_grammarVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CzechGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/CzechGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammar.interp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammar.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarBaseListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarBaseVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarLexer.interp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarLexer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarLexer.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/CzechGrammarVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/ExpressionCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/ExpressionCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/enums/EMethodReturnType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/enums/EMethodReturnType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/enums/EVariableType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/enums/EVariableType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorArithmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorAssignedVariableNotExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorAssignedVariableNotExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorConstantAssigment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorConstantAssigment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorInvalidParametersCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorInvalidParametersCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMethodAlreadyExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodNotExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMethodNotExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchExpressionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchExpressionResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodAndCallParameterTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodAndCallParameterTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodCallReturnType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodCallReturnType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorSwitchMultipleDefaultBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorSwitchMultipleDefaultBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorVariableAlreadyExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableNotExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorVariableNotExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVoidMethodExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/error/ErrorVoidMethodExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/Control/ControlFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/control/ControlFor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/instruction/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/instruction/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/enums/EMethodReturnType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/enums/EMethodReturnType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/enums/EVariableType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/enums/EVariableType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/Error.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorArithmetic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorArithmetic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorAssignedVariableNotExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorAssignedVariableNotExists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorConstantAssigment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorConstantAssigment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorInvalidParametersCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorInvalidParametersCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodAlreadyExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodAlreadyExists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodNotExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodNotExists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodAndCallParameterTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodAndCallParameterTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodCallReturnType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodCallReturnType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesVariable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesVariable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorSwitchMultipleDefaultBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorSwitchMultipleDefaultBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableAlreadyExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableAlreadyExists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableNotExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableNotExists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVoidMethodExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVoidMethodExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/object/instruction/Instruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/object/instruction/Instruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
-    <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="">
-      <change beforePath="$PROJECT_DIR$/czech_grammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/CzechGrammar.g4" afterDir="false" />
-    </list>
+    <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/CzechGrammar.g4">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" />
-        <range start1="2" end1="3" start2="2" end2="3" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="4" end1="14" start2="4" end2="8" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="15" end1="40" start2="9" end2="15" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="41" end1="48" start2="16" end2="22" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="49" end1="55" start2="23" end2="27" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="56" end1="61" start2="28" end2="60" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="62" end1="63" start2="61" end2="61" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="64" end1="65" start2="62" end2="63" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="66" end1="67" start2="64" end2="65" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="68" end1="69" start2="66" end2="67" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="70" end1="71" start2="68" end2="69" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="72" end1="73" start2="70" end2="73" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="74" end1="75" start2="74" end2="75" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="76" end1="77" start2="76" end2="89" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="78" end1="79" start2="90" end2="94" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="80" end1="82" start2="95" end2="99" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="83" end1="84" start2="100" end2="104" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="85" end1="86" start2="105" end2="108" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="87" end1="88" start2="109" end2="113" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="89" end1="90" start2="114" end2="117" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="91" end1="92" start2="118" end2="118" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="93" end1="94" start2="119" end2="125" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="95" end1="96" start2="126" end2="148" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="98" end1="99" start2="150" end2="151" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="101" end1="105" start2="153" end2="153" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="106" end1="108" start2="154" end2="157" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="109" end1="120" start2="158" end2="158" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="122" end1="124" start2="160" end2="162" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="126" end1="128" start2="164" end2="166" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="130" end1="132" start2="168" end2="171" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="133" end1="134" start2="172" end2="175" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="135" end1="136" start2="176" end2="176" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="137" end1="148" start2="177" end2="187" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="149" end1="150" start2="188" end2="188" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="151" end1="164" start2="189" end2="214" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="166" end1="168" start2="216" end2="218" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="170" end1="178" start2="220" end2="222" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="180" end1="182" start2="224" end2="226" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="184" end1="186" start2="228" end2="230" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="187" end1="190" start2="231" end2="234" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-        <range start1="191" end1="196" start2="235" end2="235" changelist="86c540bd-c92c-417f-9416-3941e99be777" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,24 +97,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/dev/KIV-FJP-SP/src/generate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/KIV-FJP-SP/src/generate&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\KIV-FJP-SP\src\generate" />
@@ -129,7 +126,6 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/temurin-11.0.17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="KIV-FJP-SP" />
       <option name="PROGRAM_PARAMETERS" value="input.txt output.txt" />
@@ -172,11 +168,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java</url>
-          <line>296</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java</url>
           <line>80</line>

@@ -23,6 +23,6 @@ public class Error
     @Override
     public String toString()
     {
-        return "Line: " + line + " : " + message;
+        return "Radka: " + line + " : " + message;
     }
 }

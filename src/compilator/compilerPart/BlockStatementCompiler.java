@@ -244,6 +244,7 @@ public class BlockStatementCompiler extends BaseCompiler
      */
     private void variableIntInstruction(Variable variable)
     {
+        //todo odstranit sysout
         System.out.println(variable.getVariableDeclaration());
         switch (variable.getVariableDeclaration())
         {
@@ -294,6 +295,7 @@ public class BlockStatementCompiler extends BaseCompiler
         // check if exists
         if (!this.isInSymbolTable(variable.getValue().toString()))
         {
+            //todo -_-
             System.out.println("JSEM TADY");
             this.getErrorHandler().throwError(new ErrorAssignedVariableNotExists(variable.getValue().toString(),variable.getLine()));
         }
@@ -303,7 +305,7 @@ public class BlockStatementCompiler extends BaseCompiler
         // check if assigned value match witch variable type
         if (variable.getType() != assignedValue.getVariableType())
         {
-            this.getErrorHandler().throwError(new ErrorMismatchTypesVariable(variable.getName(), variable.getType().toString(), assignedValue.getVariableType().toString(), variable.getLine()));
+            this.getErrorHandler().throwError(new ErrorMismatchTypesVariable(variable.getName(), variable.getType(), assignedValue.getVariableType(), variable.getLine()));
         }
 
         // load value on top
