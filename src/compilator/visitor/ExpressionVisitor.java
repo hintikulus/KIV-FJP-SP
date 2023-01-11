@@ -1,8 +1,8 @@
 package compilator.visitor;
 
 import compilator.object.expression.Expression;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 public class ExpressionVisitor extends CzechGrammarBaseVisitor<Expression> {
 

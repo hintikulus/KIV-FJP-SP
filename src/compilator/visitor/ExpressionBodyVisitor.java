@@ -4,8 +4,8 @@ import compilator.enums.*;
 import compilator.object.expression.*;
 import compilator.object.method.MethodCall;
 import compilator.object.Value;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
 {

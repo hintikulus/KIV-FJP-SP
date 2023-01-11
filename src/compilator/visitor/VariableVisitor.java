@@ -7,7 +7,7 @@ import compilator.object.Variable;
 import compilator.object.expression.Expression;
 import compilator.object.method.MethodCall;
 import compilator.object.Value;
-import generate.*;
+import parser.*;
 import java.util.ArrayList;
 import java.util.List;
 

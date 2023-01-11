@@ -2,8 +2,8 @@ package compilator.visitor;
 
 import compilator.object.Block;
 import compilator.object.BlockStatement;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 public class BlockVisitor extends CzechGrammarBaseVisitor<Block> {
 

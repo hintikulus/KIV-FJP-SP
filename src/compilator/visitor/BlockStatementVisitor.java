@@ -4,8 +4,8 @@ import compilator.object.BlockStatement;
 import compilator.object.StatementData;
 import compilator.object.method.Method;
 import compilator.object.statement.Statement;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;
