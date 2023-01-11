@@ -14,7 +14,8 @@ public class LexerParserErrorListener extends BaseErrorListener
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e)
             throws ParseCancellationException
     {
-        System.out.println("Line: " + line + " : Error while parsing input file. " + msg);
+        //todo
+        System.out.println("Radka: " + line + " : chyba pri zpracovani radky. " + msg);
         System.exit(EErrorCode.ERROR_ANTLR_PROCESS.getCode());
     }
 

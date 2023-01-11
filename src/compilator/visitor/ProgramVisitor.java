@@ -1,8 +1,8 @@
 package compilator.visitor;
 
 import compilator.object.Program;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 public class ProgramVisitor extends CzechGrammarBaseVisitor<Program> {
 

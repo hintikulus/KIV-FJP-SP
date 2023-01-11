@@ -3,8 +3,8 @@ package compilator.visitor;
 import compilator.object.expression.Expression;
 import compilator.object.method.MethodCall;
 import compilator.object.method.MethodCallParameter;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;

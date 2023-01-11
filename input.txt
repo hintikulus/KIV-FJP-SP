@@ -1,5 +1,5 @@
 {
-cislo x rovno 5 plus plus plus negace 4.
+cislo x rovno 5 4.
 cislo y rovno 6.
 
 cislo vysledek rovno x minus y.

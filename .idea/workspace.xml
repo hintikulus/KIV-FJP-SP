@@ -4,61 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="uprava jazyka">
+    <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="oprava struktury pro vypisovani chyb">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/ErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/ErrorHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/BlockCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/BlockCompiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/BlockStatementCompiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/ExpressionCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/ExpressionCompiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/compilerPart/MethodCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compilerPart/MethodCompiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/Error.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorArithmetic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorAssignedVariableNotExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorConstantAssigment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorInvalidParametersCount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodAlreadyExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMethodNotExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchExpressionResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodAndCallParameterTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchMethodCallReturnType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorMismatchTypesVariable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorSwitchMultipleDefaultBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableAlreadyExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVariableNotExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilator/error/ErrorVoidMethodExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/Compilator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/Compilator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/LexerParserErrorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/LexerParserErrorListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/BlockBodyVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/BlockBodyVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/BlockStatementVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/BlockStatementVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/BlockVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/BlockVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/ExpressionBodyVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/ExpressionBodyVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/ExpressionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/ExpressionVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/ForControlVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/ForControlVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/MethodCallVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/MethodCallVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/MethodDeclarationVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/MethodDeclarationVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/ProgramVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/ProgramVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compilator/visitor/StatementVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/StatementVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SimpleJava-1.0-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SimpleJava-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/ErrorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/ErrorHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockCompiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/BlockStatementCompiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/ExpressionCompiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/compilerPart/MethodCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/compilerPart/MethodCompiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/Error.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorArithmetic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorAssignedVariableNotExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorConstantAssigment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorInvalidParametersCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodAlreadyExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMethodNotExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchExpressionResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodAndCallParameterTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchMethodCallReturnType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorMismatchTypesVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorSwitchMultipleDefaultBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableAlreadyExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVariableNotExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/error/ErrorVoidMethodExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammar.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammar.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammar.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/CzechGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/CzechGrammarVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/Compilator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/Compilator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/BlockBodyVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/BlockBodyVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/BlockStatementVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/BlockStatementVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/BlockVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/BlockVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/ExpressionBodyVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/ExpressionBodyVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/ExpressionVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/ExpressionVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/ForControlVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/ForControlVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/MethodCallVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/MethodCallVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/MethodDeclarationVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/MethodDeclarationVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/ProgramVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/ProgramVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/StatementVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/StatementVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/compilator/visitor/VariableVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/visitor/VariableVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarBaseListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarBaseVisitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarLexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BlockBodyContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BlockContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BlockStatementContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BodyContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BoolValueContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BoolVariableContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$BooleanValueContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ConstVariableDeclarationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$DecimalSymbolContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$DecimalValueContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$DecimalVariableContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprAdditiveContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprIdentifierContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprLogicalContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprMethodCallContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprMinusContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprMultipliContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprNegContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprParContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprPlusContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprPossibleValueContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExprRelationalContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExpressionBodyContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ExpressionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ForControlContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$IdentifierContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$LocalVariableDeclarationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$MethodBodyContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$MethodCallContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$MethodCallParameterContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$MethodDeclarationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$MethodParameterContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$MethodReturnTypeContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ParalelDeclarationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$PossibleTypesContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$PossibleValuesContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$ProgramContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementAssigmentContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementDoContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementForContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementIfContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementMethodCallContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementRepeatContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementSwitchContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementVariableDeclarationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$StatementWhileContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$SwitchBlockStatementContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$VariableAssigmentContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser$VariableDeclarationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/CzechGrammarVisitor.class" beforeDir="false" />
     </list>
     <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673280083615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="oprava struktury pro vypisovani chyb">
+      <created>1673282854620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673282854620</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,8 +213,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="uprava jazyka" />
-    <option name="LAST_COMMIT_MESSAGE" value="uprava jazyka" />
+    <MESSAGE value="oprava struktury pro vypisovani chyb" />
+    <option name="LAST_COMMIT_MESSAGE" value="oprava struktury pro vypisovani chyb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -177,6 +226,11 @@
           <url>file://$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java</url>
           <line>80</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compilator/LexerParserErrorListener.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

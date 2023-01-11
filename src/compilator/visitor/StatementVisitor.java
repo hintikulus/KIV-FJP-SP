@@ -10,8 +10,8 @@ import compilator.object.method.MethodCall;
 import compilator.object.Variable;
 import compilator.object.expression.Expression;
 import compilator.object.statement.*;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 import java.util.HashMap;
 import java.util.List;

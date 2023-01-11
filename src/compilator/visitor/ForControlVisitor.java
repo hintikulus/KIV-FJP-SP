@@ -3,8 +3,8 @@ package compilator.visitor;
 import compilator.enums.EVariableType;
 import compilator.object.control.ControlFor;
 import compilator.object.expression.Expression;
-import generate.CzechGrammarBaseVisitor;
-import generate.CzechGrammarParser;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
 
 public class ForControlVisitor extends CzechGrammarBaseVisitor<ControlFor>
 {
