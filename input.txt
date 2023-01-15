@@ -1,0 +1,10 @@
+{
+cislo x rovno 5 plus plus plus negace 4.
+cislo y rovno 6.
+
+cislo vysledek rovno x minus y.
+kdyz ( negace vysledek se shoduje 5)
+{
+    vysledek rovno 0.
+}
+}
