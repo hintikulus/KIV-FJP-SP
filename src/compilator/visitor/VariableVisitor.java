@@ -1,6 +1,6 @@
 package compilator.visitor;
 
-import compilator.ErrorHandler;
+import compilator.ErrorController;
 import compilator.enums.*;
 import compilator.object.Value;
 import compilator.object.Variable;
@@ -150,7 +150,7 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
         if (ctx.boolValue().booleanValue() != null) {
             EBooleanValues enumValue = EBooleanValues.getSymbol(ctx.boolValue().booleanValue().getText().toLowerCase(Locale.ROOT));
             if (enumValue == null) {
-                ErrorHandler.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]", ctx.boolValue().booleanValue().start.getLine(), EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
+                ErrorController.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]", ctx.boolValue().booleanValue().start.getLine(), EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
             }
             boolean val = Boolean.parseBoolean(enumValue.toString().toLowerCase(Locale.ROOT));
 

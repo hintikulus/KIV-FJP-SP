@@ -4,15 +4,15 @@ import compilator.enums.EErrorCode;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
 
-public class ErrorHandler {
-    private static final ErrorHandler instance = new ErrorHandler();
+public class ErrorController {
+    private static final ErrorController instance = new ErrorController();
 
-    private ErrorHandler() {
+    private ErrorController() {
     }
 
     ;
 
-    public static ErrorHandler getInstance() {
+    public static ErrorController getInstance() {
         return instance;
     }
 

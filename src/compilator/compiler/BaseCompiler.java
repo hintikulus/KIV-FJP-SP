@@ -1,6 +1,6 @@
 package compilator.compiler;
 
-import compilator.ErrorHandler;
+import compilator.ErrorController;
 import compilator.enums.EInstruction;
 import compilator.object.instruction.Instruction;
 import compilator.object.method.MethodCall;
@@ -49,7 +49,7 @@ public class BaseCompiler {
     /**
      * Instance of error handler
      */
-    protected static ErrorHandler errorHandler = ErrorHandler.getInstance();
+    protected static ErrorController errorController = ErrorController.getInstance();
 
     /**
      * Adds normal instruction to instruction list
@@ -111,8 +111,8 @@ public class BaseCompiler {
         return this.getSymbolTable().getTable().containsKey(identifier);
     }
 
-    protected ErrorHandler getErrorHandler() {
-        return errorHandler;
+    protected ErrorController getErrorHandler() {
+        return errorController;
     }
 
     public HashMap<String, MethodPrototype> getMethodPrototype() {
