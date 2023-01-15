@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EErrorCode
-{
+public enum EErrorCode {
     ERROR_ASSIGMENT_VARIABLE_NOT_EXISTS(1),
     ERROR_CONSTANT_ASSIGMENT(2),
     ERROR_INVALID_PARAMETERS_COUNT(3),
@@ -21,18 +20,15 @@ public enum EErrorCode
     ERROR_UNKNOWN(17),
     ERROR_INVALID_USE(18),
     ERROR_INVALID_OUTPUT_FILE(19),
-    ERROR_ARITHMETIC(20)
-    ;
+    ERROR_ARITHMETIC(20);
 
     private int code;
 
-    EErrorCode(int code)
-    {
+    EErrorCode(int code) {
         this.code = code;
     }
 
-    public int getCode()
-    {
+    public int getCode() {
         return this.code;
     }
 }

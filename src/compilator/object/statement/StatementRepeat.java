@@ -4,8 +4,7 @@ import compilator.enums.EStatementType;
 import compilator.object.BlockStatement;
 import compilator.object.expression.Expression;
 
-public class StatementRepeat extends Statement
-{
+public class StatementRepeat extends Statement {
     /**
      * Loop condition
      */
@@ -16,20 +15,17 @@ public class StatementRepeat extends Statement
      */
     private final BlockStatement body;
 
-    public StatementRepeat(Expression expression, BlockStatement body, int line)
-    {
+    public StatementRepeat(Expression expression, BlockStatement body, int line) {
         super(EStatementType.REPEAT_UNTIL, line);
         this.expression = expression;
         this.body = body;
     }
 
-    public BlockStatement getBody()
-    {
+    public BlockStatement getBody() {
         return body;
     }
 
-    public Expression getExpression()
-    {
+    public Expression getExpression() {
         return expression;
     }
 }

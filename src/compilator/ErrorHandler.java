@@ -18,7 +18,6 @@ public class ErrorHandler {
 
     /**
      * Print error message and ends program
-     *
      */
     public void throwError(String message, int line, EErrorCode errorCode) {
         System.out.println("Radka: " + line + " : " + message);
@@ -55,7 +54,7 @@ public class ErrorHandler {
         throwError(message, line, EErrorCode.ERROR_METHOD_NOT_EXISTS);
     }
 
-    public void throwErrorMismatchExpressionResult(String expected, String type, int line) {   //todo poresit
+    public void throwErrorMismatchExpressionResult(String expected, String type, int line) {
         String message = "Typ vysledku vyrazu neodpovida predpokladanemu typu. Predpokladano: " + expected + " Typ vysledku vyrazu: " + type;
         throwError(message, line, EErrorCode.ERROR_MISMATCH_EXPRESSION_RESULT);
     }

@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EBooleanValues
-{
+public enum EBooleanValues {
     TRUE("pravda"),
     FALSE("nepravda");
 

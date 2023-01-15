@@ -63,8 +63,7 @@ public class Variable {
      */
     private int line;
 
-    public Variable(String name, Value value, EVariableType type)
-    {
+    public Variable(String name, Value value, EVariableType type) {
         this.name = name;
         this.value = value;
         this.type = type;
@@ -72,8 +71,7 @@ public class Variable {
         this.parallelArray = new ArrayList<>();
     }
 
-    public Variable(String name, MethodCall methodCall, EVariableType type)
-    {
+    public Variable(String name, MethodCall methodCall, EVariableType type) {
         this.name = name;
         this.methodCall = methodCall;
         this.type = type;
@@ -81,8 +79,7 @@ public class Variable {
         this.parallelArray = new ArrayList<>();
     }
 
-    public Variable(String name, Expression expression, EVariableType type)
-    {
+    public Variable(String name, Expression expression, EVariableType type) {
         this.name = name;
         this.expression = expression;
         this.type = type;
@@ -90,8 +87,7 @@ public class Variable {
         this.parallelArray = new ArrayList<>();
     }
 
-    public Variable(String name, Value value, EVariableType type, boolean isConstant)
-    {
+    public Variable(String name, Value value, EVariableType type, boolean isConstant) {
         this.name = name;
         this.value = value;
         this.type = type;
@@ -99,10 +95,8 @@ public class Variable {
         this.parallelArray = new ArrayList<>();
     }
 
-    public boolean existsParallel()
-    {
-        if (this.parallelArray.size() == 0)
-        {
+    public boolean existsParallel() {
+        if (this.parallelArray.size() == 0) {
             return false;
         }
 
@@ -150,27 +144,22 @@ public class Variable {
     }
 
 
-    public MethodCall getMethodCall()
-    {
+    public MethodCall getMethodCall() {
         return methodCall;
     }
 
-    public EVariableDeclaration getVariableDeclaration()
-    {
+    public EVariableDeclaration getVariableDeclaration() {
         return variableDeclaration;
     }
 
-    public void setVariableDeclaration(EVariableDeclaration variableDeclaration)
-    {
+    public void setVariableDeclaration(EVariableDeclaration variableDeclaration) {
         this.variableDeclaration = variableDeclaration;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         Object a = value;
-        if (variableDeclaration == EVariableDeclaration.DECIMAL)
-        {
+        if (variableDeclaration == EVariableDeclaration.DECIMAL) {
             a = value.toInt();
         }
         return "Variable{" +
@@ -181,33 +170,27 @@ public class Variable {
                 '}';
     }
 
-    public Expression getExpression()
-    {
+    public Expression getExpression() {
         return expression;
     }
 
-    public void setExpression(Expression expression)
-    {
+    public void setExpression(Expression expression) {
         this.expression = expression;
     }
 
-    public int getLine()
-    {
+    public int getLine() {
         return line;
     }
 
-    public void setLine(int line)
-    {
+    public void setLine(int line) {
         this.line = line;
     }
 
-    public boolean isDeclaredWithMinus()
-    {
+    public boolean isDeclaredWithMinus() {
         return isDeclaredWithMinus;
     }
 
-    public void setDeclaredWithMinus(boolean declaredWithMinus)
-    {
+    public void setDeclaredWithMinus(boolean declaredWithMinus) {
         isDeclaredWithMinus = declaredWithMinus;
     }
 }

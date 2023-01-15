@@ -5,8 +5,7 @@ import compilator.enums.EExpressionType;
 public class ExpressionPar extends Expression {
     private Expression expression;
 
-    public ExpressionPar(Expression expression, int line)
-    {
+    public ExpressionPar(Expression expression, int line) {
         super(EExpressionType.PAR, line);
         this.expression = expression;
     }

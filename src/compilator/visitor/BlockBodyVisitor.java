@@ -9,17 +9,15 @@ import parser.CzechGrammarParser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockBodyVisitor extends CzechGrammarBaseVisitor<BlockStatement>
-{
+public class BlockBodyVisitor extends CzechGrammarBaseVisitor<BlockStatement> {
     /**
      * Visitor for BlockBody
+     *
      * @param ctx blockBody context
      * @return internal structure BlockStatement
      */
-    public BlockStatement visitBlockBody(CzechGrammarParser.BlockBodyContext ctx)
-    {
-        if (ctx == null)
-        {
+    public BlockStatement visitBlockBody(CzechGrammarParser.BlockBodyContext ctx) {
+        if (ctx == null) {
             return null;
         }
 
@@ -30,16 +28,15 @@ public class BlockBodyVisitor extends CzechGrammarBaseVisitor<BlockStatement>
 
     /**
      * Processes all statements in blockBody();
+     *
      * @param statementContextList list of statements
      * @return internal list of statements
      */
-    private List<Statement> getStatements(List<CzechGrammarParser.StatementContext> statementContextList)
-    {
+    private List<Statement> getStatements(List<CzechGrammarParser.StatementContext> statementContextList) {
         List<Statement> statements = new ArrayList<>();
         Statement statement;
 
-        for (CzechGrammarParser.StatementContext statementContext : statementContextList)
-        {
+        for (CzechGrammarParser.StatementContext statementContext : statementContextList) {
             statement = new StatementVisitor().visit(statementContext);
             statements.add(statement);
         }

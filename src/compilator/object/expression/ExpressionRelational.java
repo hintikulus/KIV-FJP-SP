@@ -1,20 +1,17 @@
 package compilator.object.expression;
 
 import compilator.enums.EExpressionType;
-import compilator.enums.EInstruction;
 import compilator.enums.EInstructionOperation;
 import compilator.enums.EOperatorRelational;
 
-public class ExpressionRelational extends Expression implements IExpression
-{
+public class ExpressionRelational extends Expression implements IExpression {
     private Expression leftExpression;
 
     private Expression rightExpression;
 
     private EOperatorRelational operatorRelational;
 
-    public ExpressionRelational(Expression leftExpression, Expression rightExpression, EOperatorRelational operatorRelational, int line)
-    {
+    public ExpressionRelational(Expression leftExpression, Expression rightExpression, EOperatorRelational operatorRelational, int line) {
         super(EExpressionType.RELATIONAL, line);
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;
@@ -46,10 +43,8 @@ public class ExpressionRelational extends Expression implements IExpression
     }
 
     @Override
-    public int getOperatorCode()
-    {
-        switch (this.operatorRelational)
-        {
+    public int getOperatorCode() {
+        switch (this.operatorRelational) {
 
             case EQUAL:
                 return EInstructionOperation.EQ.getCode();

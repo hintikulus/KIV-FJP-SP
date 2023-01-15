@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EInstructionOperation
-{
+public enum EInstructionOperation {
     UNARY_MINUS(1),
     PLUS(2),
     MINUS(3),
@@ -18,13 +17,11 @@ public enum EInstructionOperation
 
     private int value;
 
-    EInstructionOperation(int value)
-    {
+    EInstructionOperation(int value) {
         this.value = value;
     }
 
-    public int getCode()
-    {
+    public int getCode() {
         return this.value;
     }
 }

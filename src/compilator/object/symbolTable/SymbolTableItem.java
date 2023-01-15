@@ -3,13 +3,13 @@ package compilator.object.symbolTable;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
 import compilator.object.method.MethodDeclarationParameter;
+
 import java.util.List;
 
 /**
  * Represent record in Symbol table
  */
-public class SymbolTableItem
-{
+public class SymbolTableItem {
     /**
      * identifier
      */
@@ -30,7 +30,6 @@ public class SymbolTableItem
      */
     private int size;
 
-    // additional info - variable
     /**
      * indication if record belongs to variable
      */
@@ -46,8 +45,6 @@ public class SymbolTableItem
      */
     private EVariableType variableType = null;
 
-
-    // additional info - method
     /**
      * indication if record belongs to method
      */
@@ -68,8 +65,7 @@ public class SymbolTableItem
      */
     private List<MethodDeclarationParameter> methodDeclarationParameters = null;
 
-    public SymbolTableItem(String name, int level, int address, int size)
-    {
+    public SymbolTableItem(String name, int level, int address, int size) {
         this.name = name;
         this.level = level;
         this.address = address;
@@ -77,8 +73,7 @@ public class SymbolTableItem
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "SymbolTableItem{" +
                 "name='" + name +
                 ", level=" + level +
@@ -87,113 +82,91 @@ public class SymbolTableItem
                 '}';
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getLevel()
-    {
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(int level)
-    {
+    public void setLevel(int level) {
         this.level = level;
     }
 
-    public int getAddress()
-    {
+    public int getAddress() {
         return address;
     }
 
-    public void setAddress(int address)
-    {
+    public void setAddress(int address) {
         this.address = address;
     }
 
-    public int getSize()
-    {
+    public int getSize() {
         return size;
     }
 
-    public void setSize(int size)
-    {
+    public void setSize(int size) {
         this.size = size;
     }
 
-    public boolean isVariable()
-    {
+    public boolean isVariable() {
         return isVariable;
     }
 
-    public boolean isMethod()
-    {
+    public boolean isMethod() {
         return isMethod;
     }
 
-    public void setMethod(boolean method)
-    {
+    public void setMethod(boolean method) {
         isMethod = method;
     }
 
-    public boolean isConstant()
-    {
+    public boolean isConstant() {
         return isConstant;
     }
 
-    public void setConstant(boolean constant)
-    {
+    public void setConstant(boolean constant) {
         isConstant = constant;
     }
 
-    public EVariableType getVariableType()
-    {
+    public EVariableType getVariableType() {
         return variableType;
     }
 
-    public void setVariableType(EVariableType variableType)
-    {
+    public void setVariableType(EVariableType variableType) {
         this.variableType = variableType;
     }
 
-    public void setIsVariable(boolean isVariable)
-    {
+    public void setIsVariable(boolean isVariable) {
         this.isVariable = isVariable;
     }
 
-    public String getMethodIdentifier()
-    {
+    public String getMethodIdentifier() {
         return methodIdentifier;
     }
 
-    public void setMethodIdentifier(String methodIdentifier)
-    {
+    public void setMethodIdentifier(String methodIdentifier) {
         this.methodIdentifier = methodIdentifier;
     }
 
-    public EMethodReturnType getMethodReturnType()
-    {
+    public EMethodReturnType getMethodReturnType() {
         return methodReturnType;
     }
 
-    public void setMethodReturnType(EMethodReturnType methodReturnType)
-    {
+    public void setMethodReturnType(EMethodReturnType methodReturnType) {
         this.methodReturnType = methodReturnType;
     }
 
-    public List<MethodDeclarationParameter> getMethodDeclarationParameters()
-    {
+    public List<MethodDeclarationParameter> getMethodDeclarationParameters() {
         return methodDeclarationParameters;
     }
 
-    public void setMethodDeclarationParameters(List<MethodDeclarationParameter> methodDeclarationParameters)
-    {
+    public void setMethodDeclarationParameters(List<MethodDeclarationParameter> methodDeclarationParameters) {
         this.methodDeclarationParameters = methodDeclarationParameters;
     }
 }

@@ -3,8 +3,7 @@ package compilator.object.method;
 import compilator.enums.EVariableType;
 import compilator.object.expression.Expression;
 
-public class MethodCallParameter
-{
+public class MethodCallParameter {
     /**
      * Parameter value
      */
@@ -15,28 +14,23 @@ public class MethodCallParameter
      */
     private EVariableType variableType;
 
-    public MethodCallParameter(Expression expression)
-    {
+    public MethodCallParameter(Expression expression) {
         this.expression = expression;
     }
 
-    public Expression getExpression()
-    {
+    public Expression getExpression() {
         return expression;
     }
 
-    public EVariableType getVariableType()
-    {
+    public EVariableType getVariableType() {
         return variableType;
     }
 
-    public void setExpression(Expression expression)
-    {
+    public void setExpression(Expression expression) {
         this.expression = expression;
     }
 
-    public void setVariableType(EVariableType variableType)
-    {
+    public void setVariableType(EVariableType variableType) {
         this.variableType = variableType;
     }
 }

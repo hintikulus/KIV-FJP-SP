@@ -1,56 +1,55 @@
 package compilator.visitor;
 
 import compilator.enums.*;
+import compilator.object.Value;
 import compilator.object.expression.*;
 import compilator.object.method.MethodCall;
-import compilator.object.Value;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
-public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
-{
+public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression> {
     /**
      * Visitor for ExprNeg()
+     *
      * @param ctx ExprNeg context
      * @return Expression
      */
     @Override
-    public Expression visitExprNeg(CzechGrammarParser.ExprNegContext ctx)
-    {
+    public Expression visitExprNeg(CzechGrammarParser.ExprNegContext ctx) {
         return new ExpressionNegation(this.visit(ctx.expressionBody()), ctx.start.getLine());
     }
 
     /**
      * Visitor for ExprMinus()
+     *
      * @param ctx ExprMinus context
      * @return Expression
      */
     @Override
-    public Expression visitExprMinus(CzechGrammarParser.ExprMinusContext ctx)
-    {
+    public Expression visitExprMinus(CzechGrammarParser.ExprMinusContext ctx) {
         return new ExpressionMinus(this.visit(ctx.expressionBody()), ctx.start.getLine());
     }
 
     /**
      * Visitor for ExprPlus()
      * useless, but we want to allow write for example method(+(1+1))
+     *
      * @param ctx ExprMinus context
      * @return Expression
      */
     @Override
-    public Expression visitExprPlus(CzechGrammarParser.ExprPlusContext ctx)
-    {
+    public Expression visitExprPlus(CzechGrammarParser.ExprPlusContext ctx) {
         return new ExpressionPlus(this.visit(ctx.expressionBody()), ctx.start.getLine());
     }
 
     /**
      * Visitor for ExprAdditive()
+     *
      * @param ctx ExprAdditive context
      * @return Expression
      */
     @Override
-    public Expression visitExprAdditive(CzechGrammarParser.ExprAdditiveContext ctx)
-    {
+    public Expression visitExprAdditive(CzechGrammarParser.ExprAdditiveContext ctx) {
         Expression left = this.visit(ctx.expressionBody(0));
         Expression right = this.visit(ctx.expressionBody(1));
         EOperatorAdditive operator = EOperatorAdditive.getSymbol(ctx.op.getText());
@@ -60,23 +59,23 @@ public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
 
     /**
      * Visitor for ExprPar()
+     *
      * @param ctx ExprPar context
      * @return Expression
      */
     @Override
-    public Expression visitExprPar(CzechGrammarParser.ExprParContext ctx)
-    {
+    public Expression visitExprPar(CzechGrammarParser.ExprParContext ctx) {
         return new ExpressionPar(this.visit(ctx.expressionBody()), ctx.start.getLine());
     }
 
     /**
      * Visitor for ExprRelational()
+     *
      * @param ctx ExprRelational context
      * @return Expression
      */
     @Override
-    public Expression visitExprRelational(CzechGrammarParser.ExprRelationalContext ctx)
-    {
+    public Expression visitExprRelational(CzechGrammarParser.ExprRelationalContext ctx) {
         Expression left = this.visit(ctx.expressionBody(0));
         Expression right = this.visit(ctx.expressionBody(1));
         EOperatorRelational operator = EOperatorRelational.getSymbol(ctx.op.getText());
@@ -86,39 +85,35 @@ public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
 
     /**
      * Visitor for ExprIdentifier()
+     *
      * @param ctx ExprIdentifier context
      * @return Expression
      */
     @Override
-    public Expression visitExprIdentifier(CzechGrammarParser.ExprIdentifierContext ctx)
-    {
+    public Expression visitExprIdentifier(CzechGrammarParser.ExprIdentifierContext ctx) {
         return new ExpressionIdentifier(new Value(ctx.identifier().getText()), ctx.start.getLine());
     }
 
     /**
      * Visitor for ExprPossibleValue()
+     *
      * @param ctx ExprPossibleValue context
      * @return Expression
      */
     @Override
-    public Expression visitExprPossibleValue(CzechGrammarParser.ExprPossibleValueContext ctx)
-    {
+    public Expression visitExprPossibleValue(CzechGrammarParser.ExprPossibleValueContext ctx) {
         EVariableType type = null;
         Value value = null;
 
-        if (ctx.possibleValues().DECIMAL() != null)
-        {
+        if (ctx.possibleValues().DECIMAL() != null) {
             int dimension = 1;
-            if (ctx.possibleValues().decimalSymbol() != null && ctx.possibleValues().decimalSymbol().getText().equals("-"))
-            {
+            if (ctx.possibleValues().decimalSymbol() != null && ctx.possibleValues().decimalSymbol().getText().equals("-")) {
                 dimension = -1;
             }
             int val = Integer.parseInt(ctx.possibleValues().DECIMAL().getText());
             value = new Value(val * dimension);
             type = EVariableType.INT;
-        }
-        else if (ctx.possibleValues().booleanValue() != null)
-        {
+        } else if (ctx.possibleValues().booleanValue() != null) {
             value = new Value(ctx.possibleValues().booleanValue().getText());
             type = EVariableType.BOOLEAN;
         }
@@ -128,12 +123,12 @@ public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
 
     /**
      * visitor for ExprLogical()
+     *
      * @param ctx ExprLogical context
      * @return Expression
      */
     @Override
-    public Expression visitExprLogical(CzechGrammarParser.ExprLogicalContext ctx)
-    {
+    public Expression visitExprLogical(CzechGrammarParser.ExprLogicalContext ctx) {
         Expression left = this.visit(ctx.expressionBody(0));
         Expression right = this.visit(ctx.expressionBody(1));
         EOperatorLogical operator = EOperatorLogical.getSymbol(ctx.op.getText());
@@ -143,12 +138,12 @@ public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
 
     /**
      * Visitor for ExprMultipli()
+     *
      * @param ctx ExprMultipli context
      * @return Expression
      */
     @Override
-    public Expression visitExprMultipli(CzechGrammarParser.ExprMultipliContext ctx)
-    {
+    public Expression visitExprMultipli(CzechGrammarParser.ExprMultipliContext ctx) {
         Expression left = this.visit(ctx.expressionBody(0));
         Expression right = this.visit(ctx.expressionBody(1));
         EOperatorMultiplication operator = EOperatorMultiplication.getSymbol(ctx.op.getText());
@@ -158,12 +153,12 @@ public class ExpressionBodyVisitor extends CzechGrammarBaseVisitor<Expression>
 
     /**
      * Visitor for ExprMethodCall()
+     *
      * @param ctx ExprMethodCall context
      * @return Expression
      */
     @Override
-    public Expression visitExprMethodCall(CzechGrammarParser.ExprMethodCallContext ctx)
-    {
+    public Expression visitExprMethodCall(CzechGrammarParser.ExprMethodCallContext ctx) {
         MethodCall methodCall = new MethodCallVisitor().visit(ctx.methodCall());
 
         return new ExpressionMethodCall(methodCall, ctx.start.getLine());

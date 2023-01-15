@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EVariableDeclaration
-{
+public enum EVariableDeclaration {
     DECIMAL,
     METHOD_CALL,
     IDENTIFIER,

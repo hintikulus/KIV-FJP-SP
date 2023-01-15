@@ -9,8 +9,7 @@ import parser.CzechGrammarParser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MethodCallVisitor extends CzechGrammarBaseVisitor<MethodCall>
-{
+public class MethodCallVisitor extends CzechGrammarBaseVisitor<MethodCall> {
     /**
      * Indication of method
      */
@@ -18,12 +17,12 @@ public class MethodCallVisitor extends CzechGrammarBaseVisitor<MethodCall>
 
     /**
      * Visitor for MethodCall()
+     *
      * @param ctx MethodCall context
      * @return
      */
     @Override
-    public MethodCall visitMethodCall(CzechGrammarParser.MethodCallContext ctx)
-    {
+    public MethodCall visitMethodCall(CzechGrammarParser.MethodCallContext ctx) {
         String identifier = ctx.identifier().getText() + this.METHOD_SYMBOL;
         List<MethodCallParameter> methodCallParameters = this.parseMethodCallParameters(ctx.methodCallParameter());
 
@@ -32,16 +31,15 @@ public class MethodCallVisitor extends CzechGrammarBaseVisitor<MethodCall>
 
     /**
      * Processes method call parameters into internal structure
+     *
      * @param methodCallParameterContextsList methodCallParameterContext
      * @return
      */
-    private List<MethodCallParameter> parseMethodCallParameters(List<CzechGrammarParser.MethodCallParameterContext> methodCallParameterContextsList)
-    {
+    private List<MethodCallParameter> parseMethodCallParameters(List<CzechGrammarParser.MethodCallParameterContext> methodCallParameterContextsList) {
         List<MethodCallParameter> methodCallParameters = new ArrayList<>();
         MethodCallParameter methodCallParameter;
 
-        for (CzechGrammarParser.MethodCallParameterContext parameterContext : methodCallParameterContextsList)
-        {
+        for (CzechGrammarParser.MethodCallParameterContext parameterContext : methodCallParameterContextsList) {
             Expression expression = new ExpressionBodyVisitor().visit(parameterContext.expressionBody());
 
             methodCallParameter = new MethodCallParameter(expression);

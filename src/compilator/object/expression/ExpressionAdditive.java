@@ -1,10 +1,10 @@
 package compilator.object.expression;
 
+import compilator.enums.EExpressionType;
 import compilator.enums.EInstructionOperation;
 import compilator.enums.EOperatorAdditive;
-import compilator.enums.EExpressionType;
 
-public class ExpressionAdditive extends Expression implements IExpression{
+public class ExpressionAdditive extends Expression implements IExpression {
 
     private Expression leftExpression;
 
@@ -44,10 +44,8 @@ public class ExpressionAdditive extends Expression implements IExpression{
     }
 
     @Override
-    public int getOperatorCode()
-    {
-        switch (this.getOperatorAdditive())
-        {
+    public int getOperatorCode() {
+        switch (this.getOperatorAdditive()) {
             case PLUS:
                 return EInstructionOperation.PLUS.getCode();
             case MINUS:

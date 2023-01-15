@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EMethodReturnType
-{
+public enum EMethodReturnType {
     VOID("nic"),
     BOOLEAN("vyrok"),
     INT("cislo");

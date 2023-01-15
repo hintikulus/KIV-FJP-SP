@@ -1,7 +1,6 @@
 package compilator.object.expression;
 
 import compilator.enums.EExpressionType;
-import compilator.enums.EInstructionOperation;
 import compilator.enums.EOperatorLogical;
 
 public class ExpressionLogical extends Expression {
@@ -11,8 +10,7 @@ public class ExpressionLogical extends Expression {
     private Expression rightExpression;
     private EOperatorLogical operatorLogical;
 
-    public ExpressionLogical(Expression leftExpression, Expression rightExpression, EOperatorLogical operatorLogical, int line)
-    {
+    public ExpressionLogical(Expression leftExpression, Expression rightExpression, EOperatorLogical operatorLogical, int line) {
         super(EExpressionType.LOGICAL, line);
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;

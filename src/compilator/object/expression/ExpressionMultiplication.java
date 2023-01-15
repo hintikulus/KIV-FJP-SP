@@ -1,19 +1,17 @@
 package compilator.object.expression;
 
 import compilator.enums.EExpressionType;
-import compilator.enums.EInstruction;
 import compilator.enums.EInstructionOperation;
 import compilator.enums.EOperatorMultiplication;
 
-public class ExpressionMultiplication extends Expression implements IExpression{
+public class ExpressionMultiplication extends Expression implements IExpression {
 
     private Expression leftExpression;
 
     private Expression rightExpression;
     private EOperatorMultiplication operatorMultiplication;
 
-    public ExpressionMultiplication(Expression leftExpression, Expression rightExpression, EOperatorMultiplication operatorMultiplication, int line)
-    {
+    public ExpressionMultiplication(Expression leftExpression, Expression rightExpression, EOperatorMultiplication operatorMultiplication, int line) {
         super(EExpressionType.MULTIPLICATION, line);
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;
@@ -44,10 +42,8 @@ public class ExpressionMultiplication extends Expression implements IExpression{
         this.leftExpression = leftExpression;
     }
 
-    public int getOperatorCode()
-    {
-        switch (this.getOperatorMultiplication())
-        {
+    public int getOperatorCode() {
+        switch (this.getOperatorMultiplication()) {
             case MULTIPLY:
                 return EInstructionOperation.MULTIPLY.getCode();
             case DIVIDE:

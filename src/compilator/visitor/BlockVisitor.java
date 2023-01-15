@@ -9,6 +9,7 @@ public class BlockVisitor extends CzechGrammarBaseVisitor<Block> {
 
     /**
      * Visitor for Block
+     *
      * @param ctx Block context
      * @return internal structure of Block
      */

@@ -3,8 +3,7 @@ package compilator.object.statement;
 import compilator.enums.EStatementType;
 import compilator.object.expression.Expression;
 
-public class StatementAssigment extends Statement
-{
+public class StatementAssigment extends Statement {
     /**
      * Statement identifier
      */
@@ -15,20 +14,17 @@ public class StatementAssigment extends Statement
      */
     private final Expression expression;
 
-    public StatementAssigment(String identifier, Expression expression, int line)
-    {
+    public StatementAssigment(String identifier, Expression expression, int line) {
         super(EStatementType.ASSIGMENT, line);
         this.identifier = identifier;
         this.expression = expression;
     }
 
-    public String getIdentifier()
-    {
+    public String getIdentifier() {
         return identifier;
     }
 
-    public Expression getExpression()
-    {
+    public Expression getExpression() {
         return expression;
     }
 }

@@ -8,12 +8,12 @@ public class ExpressionVisitor extends CzechGrammarBaseVisitor<Expression> {
 
     /**
      * Visitor for Expression()
+     *
      * @param ctx Expression context
      * @return
      */
     @Override
-    public Expression visitExpression(CzechGrammarParser.ExpressionContext ctx)
-    {
+    public Expression visitExpression(CzechGrammarParser.ExpressionContext ctx) {
         Expression expression = new ExpressionBodyVisitor().visit(ctx.expressionBody());
 
         return expression;

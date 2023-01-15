@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EStatementType
-{
+public enum EStatementType {
     DO_WHILE,
     FOR,
     IF,

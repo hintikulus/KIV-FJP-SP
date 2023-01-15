@@ -1,4 +1,4 @@
-package compilator.compilerPart;
+package compilator.compiler;
 
 import compilator.enums.EInstruction;
 import compilator.object.method.Method;
@@ -7,79 +7,72 @@ import compilator.object.symbolTable.SymbolTableItem;
 
 import java.util.List;
 
-public class MethodCompiler extends BaseCompiler
-{
+public class MethodCompiler extends BaseCompiler {
     private Method method;
 
-    public MethodCompiler(Method method)
-    {
+    public MethodCompiler(Method method) {
         this.method = method;
     }
 
-    public void run()
-    {
+    public void run() {
         this.processMethod();
     }
 
     /**
      * Processes method into instructions
      */
-    private void processMethod()
-    {
-        // check if method exists
-        if (this.isInSymbolTable(this.method.getIdentifier()))
-        {
+    private void processMethod() {
+        // kontrola jestli metoda existuje v tabulce symbolu
+        if (this.isInSymbolTable(this.method.getIdentifier())) {
             this.getErrorHandler().throwErrorMethodAlreadyExistsError(this.method.getIdentifier(), this.method.getLine());
         }
 
-        // new scope, new stack pointer
         this.setStackPointer(this.STACK_POINTER_DEFAULT_VALUE);
 
-        // variables + parameters + default method size
+        // promenne + parametry + velikost metody
         int methodCustomSize = 0;
 
-        if (this.method.getBody() != null)
-        {
+        if (this.method.getBody() != null) {
             methodCustomSize = this.method.getBody().getStatementData().getVariableDeclarationCount() + this.method.getBody().getStatementData().getForStatementCount();
         }
 
-        // space for variables is declared in blockStatement
+        // misto pro promenne je definovane v blockStatement
         int baseMethodSize = this.method.getParameters().size() + this.BASE_METHOD_SIZE;
 
-        // add method to symbol of table, have to be added first, for get address of row to address method call
-        // method address pointing at INT instruction of method
+        // pridani metody do tabulky symbolu
+        // adresy metod smeruji z INT instrukce metod
         this.addMethodToSymbolTable(methodCustomSize, baseMethodSize);
 
-        // load parameters from stack
+        // nacti promenne ze zasobniku
         this.loadParametersFromStack();
 
         BlockStatementCompiler blockStatementCompiler = new BlockStatementCompiler(this.method.getBody(), 1);
         blockStatementCompiler.setUpInnerBodySettings();
-        // cant be deleted before compile return value
+
+
         blockStatementCompiler.setDeleteLocalVariables(false);
         blockStatementCompiler.run();
 
-        if (this.method.getReturnValue() != null)
-        {
+        if (this.method.getReturnValue() != null) {
             new ExpressionCompiler(this.method.getReturnValue(), this.method.getReturnType(), 1).run();
-            // store value to return address
+            // uloz navratovou adresu
             this.addInstruction(EInstruction.STO, 0, -(this.method.getParameters().size() + 1));
         }
 
-        // now we can delete variables
+        // smazani lokalnich promennych metody
         blockStatementCompiler.deleteLocalVariables();
         this.deleteParametersFromSymbolOfTable();
 
-        this.addInstruction(EInstruction.RET, 0,0);
+        this.addInstruction(EInstruction.RET, 0, 0);
     }
 
     /**
      * Adds method to symbol table and increase stack
-     * @param methodSize size for symbol table item (full size)
+     *
+     * @param methodSize     size for symbol table item (full size)
      * @param baseMethodSize base size (default size + parameters count)
      */
-    private void addMethodToSymbolTable(int methodSize, int baseMethodSize)
-    {
+    private void addMethodToSymbolTable(int methodSize, int baseMethodSize) {
         SymbolTableItem symbolTableItem = new SymbolTableItem(this.method.getIdentifier(), 0, this.getInstructionsCounter(), methodSize);
         symbolTableItem.setMethod(true);
         symbolTableItem.setMethodReturnType(method.getReturnType());
@@ -93,15 +86,12 @@ public class MethodCompiler extends BaseCompiler
     /**
      * Method load parameters from top of stack and stores them
      */
-    private void loadParametersFromStack()
-    {
+    private void loadParametersFromStack() {
         List<MethodDeclarationParameter> parameters = this.method.getParameters();
         SymbolTableItem item;
 
-        for (int i = 0 ; i < parameters.size() ; i++)
-        {
-            if (this.isInSymbolTable(parameters.get(i).getIdentifier()))
-            {
+        for (int i = 0; i < parameters.size(); i++) {
+            if (this.isInSymbolTable(parameters.get(i).getIdentifier())) {
                 this.getErrorHandler().throwErrorVariableAlreadyExists(parameters.get(i).getIdentifier(), this.method.getLine());
             }
 
@@ -119,10 +109,8 @@ public class MethodCompiler extends BaseCompiler
     /**
      * Removes parameters from Symbol table
      */
-    private void deleteParametersFromSymbolOfTable()
-    {
-        for (MethodDeclarationParameter parameter: this.method.getParameters())
-        {
+    private void deleteParametersFromSymbolOfTable() {
+        for (MethodDeclarationParameter parameter : this.method.getParameters()) {
             this.getSymbolTable().getTable().remove(parameter.getIdentifier());
         }
     }

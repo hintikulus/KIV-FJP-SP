@@ -3,10 +3,7 @@ package compilator.object.method;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
 
-import java.util.List;
-
-public class MethodPrototype
-{
+public class MethodPrototype {
     /**
      * Method name
      */
@@ -17,40 +14,31 @@ public class MethodPrototype
      */
     private EMethodReturnType methodReturnType;
 
-    public MethodPrototype(String name, EMethodReturnType methodReturnType)
-    {
+    public MethodPrototype(String name, EMethodReturnType methodReturnType) {
         this.name = name;
         this.methodReturnType = methodReturnType;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public EMethodReturnType getMethodReturnType()
-    {
+    public EMethodReturnType getMethodReturnType() {
         return methodReturnType;
     }
 
-    public void setMethodReturnType(EMethodReturnType methodReturnType)
-    {
+    public void setMethodReturnType(EMethodReturnType methodReturnType) {
         this.methodReturnType = methodReturnType;
     }
 
-    public EVariableType convertReturnTypeToVariableType()
-    {
-        if (this.methodReturnType == EMethodReturnType.INT)
-        {
+    public EVariableType convertReturnTypeToVariableType() {
+        if (this.methodReturnType == EMethodReturnType.INT) {
             return EVariableType.INT;
-        }
-        else if (this.methodReturnType == EMethodReturnType.BOOLEAN)
-        {
+        } else if (this.methodReturnType == EMethodReturnType.BOOLEAN) {
             return EVariableType.BOOLEAN;
         }
 

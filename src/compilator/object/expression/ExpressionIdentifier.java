@@ -7,8 +7,7 @@ public class ExpressionIdentifier extends Expression {
 
     private Value value;
 
-    public ExpressionIdentifier(Value value, int line)
-    {
+    public ExpressionIdentifier(Value value, int line) {
         super(EExpressionType.IDENTIFIER, line);
         this.value = value;
     }

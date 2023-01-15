@@ -13,8 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
-{
+public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method> {
     /**
      * Indication of method
      */
@@ -22,12 +21,12 @@ public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
 
     /**
      * Visitor for MethodDeclaration()
+     *
      * @param ctx MethodDeclarationContext()
      * @return
      */
     @Override
-    public Method visitMethodDeclaration(CzechGrammarParser.MethodDeclarationContext ctx)
-    {
+    public Method visitMethodDeclaration(CzechGrammarParser.MethodDeclarationContext ctx) {
 
         EMethodReturnType returnType = EMethodReturnType.getSymbol(ctx.methodReturnType().getText().toLowerCase(Locale.ROOT));
 
@@ -37,10 +36,9 @@ public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
 
         BlockStatement body = ctx.methodBody().blockBody() != null ? new BlockBodyVisitor().visit(ctx.methodBody().blockBody()) : null;
 
-        Expression returnValue =  null;
+        Expression returnValue = null;
 
-        if (ctx.methodBody().expressionBody() != null)
-        {
+        if (ctx.methodBody().expressionBody() != null) {
             returnValue = new ExpressionBodyVisitor().visit(ctx.methodBody().expressionBody());
             returnValue.setExpectedReturnType(returnType == EMethodReturnType.INT ? EVariableType.INT : EVariableType.BOOLEAN);
         }
@@ -50,21 +48,19 @@ public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
 
     /**
      * Processes method parameters
+     *
      * @param methodParameterContext list of parameters context
      * @return
      */
-    private List<MethodDeclarationParameter> parseMethodParameters(List<CzechGrammarParser.MethodParameterContext> methodParameterContext)
-    {
+    private List<MethodDeclarationParameter> parseMethodParameters(List<CzechGrammarParser.MethodParameterContext> methodParameterContext) {
         List<MethodDeclarationParameter> methodDeclarationParameters = new ArrayList<>();
         MethodDeclarationParameter methodDeclarationParameter;
 
-        for (CzechGrammarParser.MethodParameterContext method : methodParameterContext)
-        {
-            //EVariableType type = EVariableType.valueOf(method.possibleTypes().getText().toUpperCase());
+        for (CzechGrammarParser.MethodParameterContext method : methodParameterContext) {
             EVariableType type = EVariableType.getSymbol(method.possibleTypes().getText().toLowerCase(Locale.ROOT));
             String identifier = method.identifier().getText();
 
-            methodDeclarationParameter = new MethodDeclarationParameter(type,identifier);
+            methodDeclarationParameter = new MethodDeclarationParameter(type, identifier);
 
             methodDeclarationParameters.add(methodDeclarationParameter);
         }

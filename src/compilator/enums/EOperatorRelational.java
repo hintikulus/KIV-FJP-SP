@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EOperatorRelational
-{
+public enum EOperatorRelational {
     EQUAL("se shoduje"),
     NOT_EQUAL("nerovno"),
     LT("mensi nez"),
@@ -11,15 +10,13 @@ public enum EOperatorRelational
 
     private String symbol;
 
-    EOperatorRelational(String symbol)
-    {
+    EOperatorRelational(String symbol) {
         this.symbol = symbol;
     }
 
     public static EOperatorRelational getSymbol(String value) {
-        for(EOperatorRelational e: EOperatorRelational.values()) {
-            if(e.symbol.equals(value))
-            {
+        for (EOperatorRelational e : EOperatorRelational.values()) {
+            if (e.symbol.equals(value)) {
                 return e;
             }
         }

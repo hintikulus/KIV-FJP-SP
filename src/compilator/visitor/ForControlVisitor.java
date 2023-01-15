@@ -6,16 +6,15 @@ import compilator.object.expression.Expression;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
-public class ForControlVisitor extends CzechGrammarBaseVisitor<ControlFor>
-{
+public class ForControlVisitor extends CzechGrammarBaseVisitor<ControlFor> {
     /**
      * Visitor for ForControl()
+     *
      * @param ctx forControl context
      * @return
      */
     @Override
-    public ControlFor visitForControl(CzechGrammarParser.ForControlContext ctx)
-    {
+    public ControlFor visitForControl(CzechGrammarParser.ForControlContext ctx) {
         String identifier = ctx.identifier().getText();
 
         Expression from = new ExpressionBodyVisitor().visit(ctx.expressionBody(0));

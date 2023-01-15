@@ -4,8 +4,7 @@ import compilator.enums.EStatementType;
 import compilator.object.BlockStatement;
 import compilator.object.control.ControlFor;
 
-public class StatementFor extends Statement
-{
+public class StatementFor extends Statement {
     /**
      * For loop head
      */
@@ -16,20 +15,17 @@ public class StatementFor extends Statement
      */
     private final BlockStatement body;
 
-    public StatementFor(ControlFor controlFor, BlockStatement body, int line)
-    {
+    public StatementFor(ControlFor controlFor, BlockStatement body, int line) {
         super(EStatementType.FOR, line);
         this.controlFor = controlFor;
         this.body = body;
     }
 
-    public BlockStatement getBody()
-    {
+    public BlockStatement getBody() {
         return body;
     }
 
-    public ControlFor getControlFor()
-    {
+    public ControlFor getControlFor() {
         return controlFor;
     }
 }

@@ -2,8 +2,7 @@ package compilator.object.statement;
 
 import compilator.object.BlockStatement;
 
-public class StatementSwitchBlock
-{
+public class StatementSwitchBlock {
     /**
      * Switch block identifier
      */
@@ -24,45 +23,37 @@ public class StatementSwitchBlock
      */
     private boolean isSetDefault = false;
 
-    public StatementSwitchBlock(BlockStatement body, int line)
-    {
+    public StatementSwitchBlock(BlockStatement body, int line) {
         this.body = body;
         this.line = line;
     }
 
-    public StatementSwitchBlock(int identifier, BlockStatement body)
-    {
+    public StatementSwitchBlock(int identifier, BlockStatement body) {
         this.identifier = identifier;
         this.body = body;
     }
 
-    public int getIdentifier()
-    {
+    public int getIdentifier() {
         return identifier;
     }
 
-    public BlockStatement getBody()
-    {
+    public BlockStatement getBody() {
         return body;
     }
 
-    public boolean isSetDefault()
-    {
+    public boolean isSetDefault() {
         return isSetDefault;
     }
 
-    public void setSetDefault(boolean setDefault)
-    {
+    public void setSetDefault(boolean setDefault) {
         isSetDefault = setDefault;
     }
 
-    public int getLine()
-    {
+    public int getLine() {
         return line;
     }
 
-    public void setLine(int line)
-    {
+    public void setLine(int line) {
         this.line = line;
     }
 }

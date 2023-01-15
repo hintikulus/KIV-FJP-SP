@@ -3,8 +3,7 @@ package compilator.object.instruction;
 import compilator.enums.EInstruction;
 import compilator.object.method.MethodCall;
 
-public class Instruction
-{
+public class Instruction {
     private EInstruction instruction;
     private int rowId;
     private int level;
@@ -14,16 +13,14 @@ public class Instruction
     private MethodCall methodCall = null;
     private boolean updatedCall = false;
 
-    public Instruction(EInstruction instruction, int rowId, int level, int address)
-    {
+    public Instruction(EInstruction instruction, int rowId, int level, int address) {
         this.instruction = instruction;
         this.rowId = rowId;
         this.level = level;
         this.address = address;
     }
 
-    public Instruction(EInstruction instruction, int rowId, int level, MethodCall methodCall)
-    {
+    public Instruction(EInstruction instruction, int rowId, int level, MethodCall methodCall) {
         this.instruction = instruction;
         this.rowId = rowId;
         this.level = level;
@@ -33,33 +30,29 @@ public class Instruction
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return this.rowId + "\t" + this.instruction + "\t" + this.level + "\t" + this.address + "\n";
     }
 
-    public void setAddress(int address)
-    {
+    public void setAddress(int address) {
         this.address = address;
     }
 
     /**
      * Address is initialized later
      * used in call instruction
+     *
      * @return
      */
-    public boolean isLaterInitialization()
-    {
+    public boolean isLaterInitialization() {
         return laterInitialization;
     }
 
-    public void setLaterInitialization(boolean laterInitialization)
-    {
+    public void setLaterInitialization(boolean laterInitialization) {
         this.laterInitialization = laterInitialization;
     }
 
-    public MethodCall getMethodCall()
-    {
+    public MethodCall getMethodCall() {
         return methodCall;
     }
 

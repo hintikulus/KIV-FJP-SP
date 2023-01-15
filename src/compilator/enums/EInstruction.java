@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EInstruction
-{
+public enum EInstruction {
     LIT("LIT"),
     OPR("OPR"),
     LOD("LOD"),
@@ -14,8 +13,7 @@ public enum EInstruction
 
     private String value;
 
-    EInstruction(String value)
-    {
+    EInstruction(String value) {
         this.value = value;
     }
 

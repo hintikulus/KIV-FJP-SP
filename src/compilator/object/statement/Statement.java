@@ -17,8 +17,7 @@ public class Statement {
      */
     private int line;
 
-    public Statement(EStatementType type, int line)
-    {
+    public Statement(EStatementType type, int line) {
         this.type = type;
         this.line = line;
     }
@@ -31,8 +30,7 @@ public class Statement {
         this.type = type;
     }
 
-    public int getLine()
-    {
+    public int getLine() {
         return line;
     }
 }

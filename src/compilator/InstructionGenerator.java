@@ -1,28 +1,26 @@
 package compilator;
 
-import compilator.compilerPart.ProgramCompiler;
+import compilator.compiler.ProgramCompiler;
 import compilator.object.Program;
 import compilator.object.instruction.Instruction;
 
 import java.util.List;
 
 
-public class InstructionGenerator
-{
+public class InstructionGenerator {
 
     private Program program;
 
-    public InstructionGenerator(Program program)
-    {
+    public InstructionGenerator(Program program) {
         this.program = program;
     }
 
     /**
      * Generate instructions from stored structure
+     *
      * @return list of instructions
      */
-    public List<Instruction> generateInstructions()
-    {
+    public List<Instruction> generateInstructions() {
         ProgramCompiler programCompiler = new ProgramCompiler(this.program);
         programCompiler.run();
 

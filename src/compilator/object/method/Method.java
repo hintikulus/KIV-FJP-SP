@@ -6,8 +6,7 @@ import compilator.object.expression.Expression;
 
 import java.util.List;
 
-public class Method
-{
+public class Method {
     /**
      * Method name
      */
@@ -38,8 +37,7 @@ public class Method
      */
     private int line;
 
-    public Method(EMethodReturnType returnType, String identifier, List<MethodDeclarationParameter> parameters, BlockStatement body, Expression returnValue, int line)
-    {
+    public Method(EMethodReturnType returnType, String identifier, List<MethodDeclarationParameter> parameters, BlockStatement body, Expression returnValue, int line) {
         this.identifier = identifier;
         this.returnType = returnType;
         this.parameters = parameters;
@@ -48,34 +46,28 @@ public class Method
         this.line = line;
     }
 
-    public String getIdentifier()
-    {
+    public String getIdentifier() {
         return identifier;
     }
 
-    public EMethodReturnType getReturnType()
-    {
+    public EMethodReturnType getReturnType() {
         return returnType;
     }
 
-    public List<MethodDeclarationParameter> getParameters()
-    {
+    public List<MethodDeclarationParameter> getParameters() {
         return parameters;
     }
 
-    public BlockStatement getBody()
-    {
+    public BlockStatement getBody() {
         return body;
     }
 
-    public Expression getReturnValue()
-    {
+    public Expression getReturnValue() {
         return returnValue;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Method{" +
                 "identifier='" + identifier + '\'' +
                 ", returnType=" + returnType +
@@ -85,8 +77,7 @@ public class Method
                 '}';
     }
 
-    public int getLine()
-    {
+    public int getLine() {
         return line;
     }
 }

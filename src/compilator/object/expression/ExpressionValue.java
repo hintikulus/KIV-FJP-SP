@@ -9,8 +9,7 @@ public class ExpressionValue extends Expression {
     private Value value;
     private EVariableType type;
 
-    public ExpressionValue(Value value, EVariableType type, int line)
-    {
+    public ExpressionValue(Value value, EVariableType type, int line) {
         super(EExpressionType.VALUE, line);
         this.value = value;
         this.type = type;
@@ -24,13 +23,11 @@ public class ExpressionValue extends Expression {
         this.value = value;
     }
 
-    public EVariableType getVariableType()
-    {
+    public EVariableType getVariableType() {
         return type;
     }
 
-    public void setVariableType(EVariableType type)
-    {
+    public void setVariableType(EVariableType type) {
         this.type = type;
     }
 }

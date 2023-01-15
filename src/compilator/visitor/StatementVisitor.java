@@ -5,10 +5,10 @@ import compilator.ErrorHandler;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
 import compilator.object.BlockStatement;
-import compilator.object.control.ControlFor;
-import compilator.object.method.MethodCall;
 import compilator.object.Variable;
+import compilator.object.control.ControlFor;
 import compilator.object.expression.Expression;
+import compilator.object.method.MethodCall;
 import compilator.object.statement.*;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
@@ -17,17 +17,16 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
-{
+public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
 
     /**
      * Visitor for StatementIf()
+     *
      * @param ctx StatementIf context
      * @return
      */
     @Override
-    public StatementIf visitStatementIf(CzechGrammarParser.StatementIfContext ctx)
-    {
+    public StatementIf visitStatementIf(CzechGrammarParser.StatementIfContext ctx) {
         Expression expression = new ExpressionVisitor().visit(ctx.expression());
         expression.setExpectedReturnType(EVariableType.BOOLEAN);
 
@@ -35,9 +34,8 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
         BlockStatement bodyElse = null;
 
-        // else part
-        if (ctx.body(1) != null)
-        {
+        // else cast
+        if (ctx.body(1) != null) {
             bodyElse = ctx.body(1).blockBody() != null ? new BlockBodyVisitor().visit(ctx.body(1).blockBody()) : null;
         }
 
@@ -46,22 +44,19 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
     /**
      * visitor for StatementFor()
+     *
      * @param ctx StatementFor context
      * @return
      */
     @Override
-    public StatementFor visitStatementFor(CzechGrammarParser.StatementForContext ctx)
-    {
+    public StatementFor visitStatementFor(CzechGrammarParser.StatementForContext ctx) {
         ControlFor controlFor = new ForControlVisitor().visit(ctx.forControl());
 
         BlockStatement body;
 
-        if (ctx.body().blockBody() == null)
-        {
+        if (ctx.body().blockBody() == null) {
             body = null;
-        }
-        else
-        {
+        } else {
             body = new BlockBodyVisitor().visit(ctx.body().blockBody());
         }
 
@@ -70,12 +65,12 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
     /**
      * Visitor for StatementWhile()
+     *
      * @param ctx StatementWhile context
      * @return
      */
     @Override
-    public StatementWhile visitStatementWhile(CzechGrammarParser.StatementWhileContext ctx)
-    {
+    public StatementWhile visitStatementWhile(CzechGrammarParser.StatementWhileContext ctx) {
         Expression expression = new ExpressionVisitor().visit(ctx.expression());
         BlockStatement body = ctx.body().blockBody() != null ? new BlockBodyVisitor().visit(ctx.body().blockBody()) : null;
 
@@ -83,8 +78,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
     }
 
     @Override
-    public StatementDo visitStatementDo(CzechGrammarParser.StatementDoContext ctx)
-    {
+    public StatementDo visitStatementDo(CzechGrammarParser.StatementDoContext ctx) {
         Expression expression = new ExpressionVisitor().visit(ctx.expression());
         BlockStatement body = ctx.body().blockBody() != null ? new BlockBodyVisitor().visit(ctx.body().blockBody()) : null;
 
@@ -92,8 +86,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
     }
 
     @Override
-    public StatementSwitch visitStatementSwitch(CzechGrammarParser.StatementSwitchContext ctx)
-    {
+    public StatementSwitch visitStatementSwitch(CzechGrammarParser.StatementSwitchContext ctx) {
         List<CzechGrammarParser.SwitchBlockStatementContext> switchBlocks = ctx.switchBlockStatement();
 
         HashMap<Integer, StatementSwitchBlock> switchBlockHashMap = new HashMap<>();
@@ -102,21 +95,17 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
         Expression expression = new ExpressionVisitor().visit(ctx.expression());
 
-        for (CzechGrammarParser.SwitchBlockStatementContext switchBlockStatement : switchBlocks)
-        {
-            // case block
-            if (switchBlockStatement.CASE() != null)
-            {
+        for (CzechGrammarParser.SwitchBlockStatementContext switchBlockStatement : switchBlocks) {
+            // case blok
+            if (switchBlockStatement.CASE() != null) {
                 int identifier = Integer.parseInt(switchBlockStatement.DECIMAL().getText());
                 BlockStatement body = switchBlockStatement.body().blockBody() != null ? new BlockBodyVisitor().visit(switchBlockStatement.body().blockBody()) : null;
                 StatementSwitchBlock stmtSwitchBlock = new StatementSwitchBlock(identifier, body);
                 switchBlockHashMap.put(identifier, stmtSwitchBlock);
             }
-            // default block
-            else
-            {
-                if (defaultBlock != null)
-                {
+            // default blok
+            else {
+                if (defaultBlock != null) {
                     ErrorHandler.getInstance().throwErrorSwitchMultipleDefaultBlock(switchBlockStatement.start.getLine());
                 }
 
@@ -130,12 +119,12 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
     /**
      * Visitor for StatementRepeat()
+     *
      * @param ctx StatementRepeat context
      * @return
      */
     @Override
-    public StatementRepeat visitStatementRepeat(CzechGrammarParser.StatementRepeatContext ctx)
-    {
+    public StatementRepeat visitStatementRepeat(CzechGrammarParser.StatementRepeatContext ctx) {
         Expression expression = new ExpressionVisitor().visit(ctx.expression());
         BlockStatement body = ctx.body().blockBody() != null ? new BlockBodyVisitor().visit(ctx.body().blockBody()) : null;
 
@@ -144,12 +133,12 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
     /**
      * Visitor for StatementMethodCall()
+     *
      * @param ctx StatementMethodCall context
      * @return
      */
     @Override
-    public Statement visitStatementMethodCall(CzechGrammarParser.StatementMethodCallContext ctx)
-    {
+    public Statement visitStatementMethodCall(CzechGrammarParser.StatementMethodCallContext ctx) {
         MethodCall methodCall = new MethodCallVisitor().visit(ctx.methodCall());
         methodCall.setExpectedReturnType(EMethodReturnType.VOID);
 
@@ -159,12 +148,12 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
     /**
      * Visitor for StatementAssigment()
+     *
      * @param ctx StatementAssigment
      * @return
      */
     @Override
-    public Statement visitStatementAssigment(CzechGrammarParser.StatementAssigmentContext ctx)
-    {
+    public Statement visitStatementAssigment(CzechGrammarParser.StatementAssigmentContext ctx) {
         String identifier = ctx.variableAssigment().identifier().getText();
         Expression expression = new ExpressionBodyVisitor().visit(ctx.variableAssigment().expressionBody());
 
@@ -173,12 +162,12 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement>
 
     /**
      * Visitor for StatementVariableDeclaration
+     *
      * @param ctx StatementVariableDeclaration context
      * @return
      */
     @Override
-    public Statement visitStatementVariableDeclaration(CzechGrammarParser.StatementVariableDeclarationContext ctx)
-    {
+    public Statement visitStatementVariableDeclaration(CzechGrammarParser.StatementVariableDeclarationContext ctx) {
         Variable variable = new VariableVisitor().visit(ctx.variableDeclaration());
         variable.setLine(ctx.start.getLine());
 

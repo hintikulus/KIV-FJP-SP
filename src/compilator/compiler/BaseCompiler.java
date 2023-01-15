@@ -1,4 +1,4 @@
-package compilator.compilerPart;
+package compilator.compiler;
 
 import compilator.ErrorHandler;
 import compilator.enums.EInstruction;
@@ -10,8 +10,7 @@ import compilator.object.symbolTable.SymbolTable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class BaseCompiler
-{
+public class BaseCompiler {
     /**
      * Instruction list
      */
@@ -54,49 +53,45 @@ public class BaseCompiler
 
     /**
      * Adds normal instruction to instruction list
+     *
      * @param instruction
      * @param level
      * @param address
      */
-    protected void addInstruction(EInstruction instruction, int level, int address)
-    {
+    protected void addInstruction(EInstruction instruction, int level, int address) {
         instructionsList.add(new Instruction(instruction, this.getInstructionsCounter(), level, address));
         instructionsCounter++;
     }
 
     /**
      * Adds method call instruction to instruction list
+     *
      * @param instruction
      * @param level
      * @param methodCall
      */
-    protected void addMethodCallInstruction(EInstruction instruction, int level, MethodCall methodCall)
-    {
+    protected void addMethodCallInstruction(EInstruction instruction, int level, MethodCall methodCall) {
         instructionsList.add(new Instruction(instruction, this.getInstructionsCounter(), level, methodCall));
         instructionsCounter++;
     }
 
-    public ArrayList<Instruction> getInstructionsList()
-    {
+    public ArrayList<Instruction> getInstructionsList() {
         return instructionsList;
     }
 
-    protected int getStackPointer()
-    {
+    protected int getStackPointer() {
         return stackPointer;
     }
-    protected void setStackPointer(int address)
-    {
+
+    protected void setStackPointer(int address) {
         stackPointer = address;
     }
 
-    protected void increaseStackPointer()
-    {
+    protected void increaseStackPointer() {
         stackPointer++;
     }
 
-    protected int getAndIncreaseStackPointer()
-    {
+    protected int getAndIncreaseStackPointer() {
         int val = stackPointer;
 
         this.increaseStackPointer();
@@ -104,33 +99,27 @@ public class BaseCompiler
         return val;
     }
 
-    protected int getInstructionsCounter()
-    {
+    protected int getInstructionsCounter() {
         return instructionsCounter;
     }
 
-    protected SymbolTable getSymbolTable()
-    {
+    protected SymbolTable getSymbolTable() {
         return symbolTable;
     }
 
-    protected boolean isInSymbolTable(String identifier)
-    {
+    protected boolean isInSymbolTable(String identifier) {
         return this.getSymbolTable().getTable().containsKey(identifier);
     }
 
-    protected ErrorHandler getErrorHandler()
-    {
+    protected ErrorHandler getErrorHandler() {
         return errorHandler;
     }
 
-    public HashMap<String, MethodPrototype> getMethodPrototype()
-    {
+    public HashMap<String, MethodPrototype> getMethodPrototype() {
         return methodPrototype;
     }
 
-    public HashMap<String, MethodPrototype> getMethodPrototypes()
-    {
+    public HashMap<String, MethodPrototype> getMethodPrototypes() {
         return methodPrototype;
     }
 }

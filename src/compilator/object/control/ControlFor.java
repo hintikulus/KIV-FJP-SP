@@ -2,8 +2,7 @@ package compilator.object.control;
 
 import compilator.object.expression.Expression;
 
-public class ControlFor
-{
+public class ControlFor {
     /**
      * Identifier for iteration
      */
@@ -19,26 +18,22 @@ public class ControlFor
      */
     private Expression to;
 
-    public ControlFor(String identifier, Expression expression, Expression to)
-    {
+    public ControlFor(String identifier, Expression expression, Expression to) {
 
         this.identifier = identifier;
         this.expression = expression;
         this.to = to;
     }
 
-    public String getIdentifier()
-    {
+    public String getIdentifier() {
         return identifier;
     }
 
-    public Expression getFrom()
-    {
+    public Expression getFrom() {
         return expression;
     }
 
-    public Expression getTo()
-    {
+    public Expression getTo() {
         return to;
     }
 }

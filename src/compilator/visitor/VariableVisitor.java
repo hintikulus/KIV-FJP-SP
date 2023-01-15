@@ -2,11 +2,13 @@ package compilator.visitor;
 
 import compilator.ErrorHandler;
 import compilator.enums.*;
+import compilator.object.Value;
 import compilator.object.Variable;
 import compilator.object.expression.Expression;
 import compilator.object.method.MethodCall;
-import compilator.object.Value;
-import parser.*;
+import parser.CzechGrammarBaseVisitor;
+import parser.CzechGrammarParser;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -15,20 +17,18 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     /**
      * Visitor for VariableDeclaration ()
+     *
      * @param ctx VariableDeclaration context
      * @return
      */
     @Override
-    public Variable visitVariableDeclaration(CzechGrammarParser.VariableDeclarationContext ctx)
-    {
-        // create decimal variable
-        if (ctx.localVariableDeclaration() != null)
-        {
+    public Variable visitVariableDeclaration(CzechGrammarParser.VariableDeclarationContext ctx) {
+        // vytvor ciselnou promennou
+        if (ctx.localVariableDeclaration() != null) {
             return this.createVariable(ctx.localVariableDeclaration());
         }
-        // create constant variable
-        else if (ctx.constVariableDeclaration() != null)
-        {
+        // vytvor konstantni promennou
+        else if (ctx.constVariableDeclaration() != null) {
             return this.createConstantVariable(ctx.constVariableDeclaration());
         }
 
@@ -37,11 +37,11 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     /**
      * Creates constant variable
+     *
      * @param ctx ConstVariableDeclaration context
      * @return
      */
-    private Variable createConstantVariable(CzechGrammarParser.ConstVariableDeclarationContext ctx)
-    {
+    private Variable createConstantVariable(CzechGrammarParser.ConstVariableDeclarationContext ctx) {
         Variable variable = this.createVariable(ctx.localVariableDeclaration());
         variable.setConstant(true);
 
@@ -50,41 +50,38 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     /**
      * Creates variable
+     *
      * @param ctx LocalVariableDeclaration context
      * @return
      */
-    private Variable createVariable(CzechGrammarParser.LocalVariableDeclarationContext ctx)
-    {
+    private Variable createVariable(CzechGrammarParser.LocalVariableDeclarationContext ctx) {
         Variable variable = null;
 
-        // decimal
-        if (ctx.decimalVariable() != null)
-        {
+        // cislo
+        if (ctx.decimalVariable() != null) {
             variable = this.createDecimal(ctx.decimalVariable());
         }
-        // boolean
-        else if (ctx.boolVariable() != null)
-        {
+        // vyrok (boolean)
+        else if (ctx.boolVariable() != null) {
             variable = this.createBoolean(ctx.boolVariable());
         }
 
-        return  variable;
+        return variable;
     }
 
     /**
      * Creates decimal variable
+     *
      * @param ctx DecimalVariable context
      * @return
      */
-    private Variable createDecimal(CzechGrammarParser.DecimalVariableContext ctx)
-    {
+    private Variable createDecimal(CzechGrammarParser.DecimalVariableContext ctx) {
         Variable variable = null;
 
         String name = ctx.identifier().getText();
 
-        // int a = 1;
-        if (ctx.decimalValue().DECIMAL() != null)
-        {
+        // cislo a rovno 1.
+        if (ctx.decimalValue().DECIMAL() != null) {
             String val = ctx.decimalValue().getText();
 
             variable = new Variable(name, new Value(val), EVariableType.INT);
@@ -92,9 +89,8 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
             variable.setDeclaredWithMinus(this.isMinusValue(ctx));
 
         }
-        // int a = b;
-        else if (ctx.decimalValue().identifier() != null)
-        {
+        // cislo a rovno b.
+        else if (ctx.decimalValue().identifier() != null) {
             String val = ctx.decimalValue().identifier().getText();
 
             variable = new Variable(name, new Value(val), EVariableType.INT);
@@ -102,20 +98,18 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
             variable.setDeclaredWithMinus(this.isMinusValue(ctx));
 
         }
-        // int a = declare();
-        else if (ctx.decimalValue().methodCall() != null)
-        {
+        // cislo a rovno spageta().
+        else if (ctx.decimalValue().methodCall() != null) {
             MethodCall methodCall = new MethodCallVisitor().visit(ctx.decimalValue().methodCall());
             methodCall.setExpectedReturnType(EMethodReturnType.INT);
 
-            variable = new Variable(name,methodCall, EVariableType.INT);
+            variable = new Variable(name, methodCall, EVariableType.INT);
             variable.setVariableDeclaration(EVariableDeclaration.METHOD_CALL);
             variable.setDeclaredWithMinus(this.isMinusValue(ctx));
 
         }
-        // int a = 1 + 2 + a;
-        else if (ctx.decimalValue().expressionBody() != null)
-        {
+        // cislo a rovno 1 plus 2 plus a.
+        else if (ctx.decimalValue().expressionBody() != null) {
             Expression expression = new ExpressionBodyVisitor().visit(ctx.decimalValue().expressionBody());
 
             variable = new Variable(name, expression, EVariableType.INT);
@@ -123,11 +117,9 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
             variable.setDeclaredWithMinus(this.isMinusValue(ctx));
         }
 
-        // check parallel declaration
-        if (ctx.paralelDeclaration() != null)
-        {
-            if (variable != null)
-            {
+        // nasobne prirazeni?
+        if (ctx.paralelDeclaration() != null) {
+            if (variable != null) {
                 variable.setParallelArray(this.getParallel(ctx.paralelDeclaration()));
             }
         }
@@ -135,11 +127,9 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
         return variable;
     }
 
-    private boolean isMinusValue(CzechGrammarParser.DecimalVariableContext ctx)
-    {
+    private boolean isMinusValue(CzechGrammarParser.DecimalVariableContext ctx) {
 
-        if (ctx.decimalSymbol() != null && ctx.decimalSymbol().getText().equals(EOperatorAdditive.MINUS.getTranslation()))
-        {
+        if (ctx.decimalSymbol() != null && ctx.decimalSymbol().getText().equals(EOperatorAdditive.MINUS.getTranslation())) {
             return true;
         }
         return false;
@@ -147,40 +137,36 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     /**
      * Creates boolean variable
+     *
      * @param ctx BoolVariable context
      * @return
      */
-    private Variable createBoolean(CzechGrammarParser.BoolVariableContext ctx)
-    {
+    private Variable createBoolean(CzechGrammarParser.BoolVariableContext ctx) {
         Variable variable = null;
 
         String name = ctx.identifier().getText();
 
-        // boolean a = true;
-        if (ctx.boolValue().booleanValue() != null)
-        {
+        // vyrok a rovno pravda.
+        if (ctx.boolValue().booleanValue() != null) {
             EBooleanValues enumValue = EBooleanValues.getSymbol(ctx.boolValue().booleanValue().getText().toLowerCase(Locale.ROOT));
-            if(enumValue == null)
-            {
-                ErrorHandler.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]",ctx.boolValue().booleanValue().start.getLine(),EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
+            if (enumValue == null) {
+                ErrorHandler.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]", ctx.boolValue().booleanValue().start.getLine(), EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
             }
             boolean val = Boolean.parseBoolean(enumValue.toString().toLowerCase(Locale.ROOT));
 
             variable = new Variable(name, new Value(val), EVariableType.BOOLEAN);
             variable.setVariableDeclaration(EVariableDeclaration.BOOLEAN);
         }
-        // boolean a = b;
-        else if (ctx.boolValue().identifier() != null)
-        {
+        // vyrok a rovno b.
+        else if (ctx.boolValue().identifier() != null) {
             String val = ctx.boolValue().identifier().getText();
 
             variable = new Variable(name, new Value(val), EVariableType.BOOLEAN);
             variable.setVariableDeclaration(EVariableDeclaration.IDENTIFIER);
 
         }
-        // boolean a = declaration();
-        else if (ctx.boolValue().methodCall() != null)
-        {
+        // vyrok a rovno spageta().
+        else if (ctx.boolValue().methodCall() != null) {
             MethodCall methodCall = new MethodCallVisitor().visit(ctx.boolValue().methodCall());
             methodCall.setExpectedReturnType(EMethodReturnType.BOOLEAN);
 
@@ -189,20 +175,17 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
             variable.setVariableDeclaration(EVariableDeclaration.METHOD_CALL);
 
         }
-        // boolean a = a && b;
-        else if (ctx.boolValue().expressionBody() != null)
-        {
+        // vyrok a rovno a a zaroven b.
+        else if (ctx.boolValue().expressionBody() != null) {
             Expression expression = new ExpressionBodyVisitor().visit(ctx.boolValue().expressionBody());
 
             variable = new Variable(name, expression, EVariableType.BOOLEAN);
             variable.setVariableDeclaration(EVariableDeclaration.EXPRESSION);
         }
 
-        // check parallel declaration
-        if (ctx.paralelDeclaration() != null)
-        {
-            if (variable != null)
-            {
+        // nasobne prirazeni?
+        if (ctx.paralelDeclaration() != null) {
+            if (variable != null) {
                 variable.setParallelArray(this.getParallel(ctx.paralelDeclaration()));
             }
         }
@@ -212,15 +195,14 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     /**
      * Processes parallel declaration
+     *
      * @param ctx ParalelDeclaration context
      * @return
      */
-    private List<String> getParallel(List<CzechGrammarParser.ParalelDeclarationContext> ctx)
-    {
+    private List<String> getParallel(List<CzechGrammarParser.ParalelDeclarationContext> ctx) {
         List<String> parallel = new ArrayList<>();
 
-        for (int i = 0 ; i < ctx.size() ; i++)
-        {
+        for (int i = 0; i < ctx.size(); i++) {
             parallel.add(ctx.get(i).identifier().getText());
         }
 

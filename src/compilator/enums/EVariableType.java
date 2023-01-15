@@ -1,7 +1,6 @@
 package compilator.enums;
 
-public enum EVariableType
-{
+public enum EVariableType {
     INT("cislo"),
     BOOLEAN("vyrok");
 
