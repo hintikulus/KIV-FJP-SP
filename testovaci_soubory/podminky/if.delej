@@ -1,0 +1,11 @@
+{
+    necht existuje cislo a rovno 2.
+    necht existuje cislo b rovno 5.
+    cislo c rovno 0.
+
+    kdyz (a mensi nez b)
+    {
+        c rovno b.
+    }
+
+}

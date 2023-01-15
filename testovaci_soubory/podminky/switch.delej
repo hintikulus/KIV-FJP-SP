@@ -1,0 +1,20 @@
+{
+    cislo a rovno 1.
+    cislo b rovno 5.
+
+    prepinej(b)
+    {
+        pripad 0 : {
+            b rovno 2 krat 4.
+        }
+        pripad 1 : {
+            b rovno 123 modulo 12.
+        }
+        pripad 5 : {
+            b rovno (13 minus 3) krat 5.
+        }
+        v jinem pripade : {
+            b rovno 333.
+        }
+    }
+}

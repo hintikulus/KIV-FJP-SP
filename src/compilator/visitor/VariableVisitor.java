@@ -1,9 +1,7 @@
 package compilator.visitor;
 
-import compilator.enums.EMethodReturnType;
-import compilator.enums.EOperatorAdditive;
-import compilator.enums.EVariableDeclaration;
-import compilator.enums.EVariableType;
+import compilator.ErrorHandler;
+import compilator.enums.*;
 import compilator.object.Variable;
 import compilator.object.expression.Expression;
 import compilator.object.method.MethodCall;
@@ -11,6 +9,7 @@ import compilator.object.Value;
 import parser.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
@@ -160,7 +159,12 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
         // boolean a = true;
         if (ctx.boolValue().booleanValue() != null)
         {
-            boolean val = Boolean.parseBoolean(ctx.boolValue().booleanValue().getText());
+            EBooleanValues enumValue = EBooleanValues.getSymbol(ctx.boolValue().booleanValue().getText().toLowerCase(Locale.ROOT));
+            if(enumValue == null)
+            {
+                ErrorHandler.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]",ctx.boolValue().booleanValue().start.getLine(),EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
+            }
+            boolean val = Boolean.parseBoolean(enumValue.toString().toLowerCase(Locale.ROOT));
 
             variable = new Variable(name, new Value(val), EVariableType.BOOLEAN);
             variable.setVariableDeclaration(EVariableDeclaration.BOOLEAN);
