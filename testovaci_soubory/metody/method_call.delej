@@ -1,0 +1,21 @@
+{
+    cislo a rovno 1.
+    cislo b rovno 2.
+    cislo c rovno 4.
+    cislo d rovno method1().
+
+    cislo spageta method1()
+    {
+        vrat a plus method2().
+    }
+
+    cislo spageta method2()
+    {
+        vrat b plus method3().
+    }
+
+    cislo spageta method3()
+    {
+        vrat a plus b.
+    }
+}

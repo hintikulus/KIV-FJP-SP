@@ -7,7 +7,7 @@ public enum EOperatorRelational
     LT("mensi nez"),
     LE("mensi rovno nez"),
     GE("vetsi rovno nez"),
-    GT("mensi nez");
+    GT("vetsi nez");
 
     private String symbol;
 
