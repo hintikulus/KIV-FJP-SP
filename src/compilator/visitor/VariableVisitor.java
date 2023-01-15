@@ -19,8 +19,8 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
      * @return
      */
     @Override
-    public Variable visitVariableDeclaration(CzechGrammarParser.VariableDeclarationContext ctx) {
-
+    public Variable visitVariableDeclaration(CzechGrammarParser.VariableDeclarationContext ctx)
+    {
         // create decimal variable
         if (ctx.localVariableDeclaration() != null)
         {

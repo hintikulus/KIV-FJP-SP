@@ -7,7 +7,7 @@ import compilator.object.expression.Expression;
 public class StatementIf extends Statement
 {
     /**
-     * Condition
+     * Condition expression
      */
     private final Expression expression;
 
@@ -31,12 +31,7 @@ public class StatementIf extends Statement
 
     public Boolean hasElse()
     {
-        if (this.getBodyElse() != null)
-        {
-            return true;
-        }
-
-        return false;
+        return this.getBodyElse() != null;
     }
 
     public BlockStatement getBodyElse()

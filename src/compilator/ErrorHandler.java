@@ -56,7 +56,7 @@ public class ErrorHandler {
     }
 
     public void throwErrorMismatchExpressionResult(String expected, String type, int line) {   //todo poresit
-        String message = "Mismatch expression result type. Expected " + expected + " got " + type;
+        String message = "Typ vysledku vyrazu neodpovida predpokladanemu typu. Predpokladano: " + expected + " Typ vysledku vyrazu: " + type;
         throwError(message, line, EErrorCode.ERROR_MISMATCH_EXPRESSION_RESULT);
     }
 

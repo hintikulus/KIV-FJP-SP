@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIV-FJP-SP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KIV-FJP-SP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/compilator/LexerParserErrorListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/compilator/LexerParserErrorListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/ErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/ErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/method/MethodCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/method/MethodCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementIf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java" afterDir="false" />
     </list>
     <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +94,7 @@
       <workItem from="1673009358924" duration="104000" />
       <workItem from="1673009473926" duration="2567000" />
       <workItem from="1673012848010" duration="10140000" />
+      <workItem from="1673765847847" duration="1245000" />
     </task>
     <task id="LOCAL-00001" summary="uprava jazyka">
       <created>1673280083615</created>
@@ -138,15 +143,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compilator/visitor/VariableVisitor.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="compilator.object.statement.StatementDeclaration" memberName="line" />

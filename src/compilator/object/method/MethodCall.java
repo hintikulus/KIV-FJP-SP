@@ -79,8 +79,6 @@ public class MethodCall
         this.expectedReturnType = expectedReturnType;
     }
 
-
-
     public List<MethodCallParameter> getParameters()
     {
         return parameters;

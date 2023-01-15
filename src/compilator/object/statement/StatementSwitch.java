@@ -14,7 +14,7 @@ public class StatementSwitch extends Statement
     /**
      * Switch blocks
      */
-    private HashMap<Integer, StatementSwitchBlock> blocks;
+    private HashMap<Integer, StatementSwitchBlock> caseBlocks;
 
     /**
      * Switch default block
@@ -25,7 +25,7 @@ public class StatementSwitch extends Statement
     {
         super(EStatementType.SWITCH, line);
         this.expression = expression;
-        this.blocks = blocks;
+        this.caseBlocks = blocks;
         this.defaultBlock = defaultBlock;
     }
 
@@ -36,7 +36,7 @@ public class StatementSwitch extends Statement
 
     public HashMap<Integer, StatementSwitchBlock> getBlocks()
     {
-        return blocks;
+        return caseBlocks;
     }
 
     public Expression getExpression()
