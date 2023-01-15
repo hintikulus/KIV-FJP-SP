@@ -11,6 +11,7 @@ import parser.CzechGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
 {
@@ -27,7 +28,8 @@ public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
     @Override
     public Method visitMethodDeclaration(CzechGrammarParser.MethodDeclarationContext ctx)
     {
-        EMethodReturnType returnType = EMethodReturnType.valueOf(ctx.methodReturnType().getText().toUpperCase());
+
+        EMethodReturnType returnType = EMethodReturnType.getSymbol(ctx.methodReturnType().getText().toLowerCase(Locale.ROOT));
 
         String identifier = ctx.identifier().getText() + this.METHOD_SYMBOL;
 
@@ -37,9 +39,9 @@ public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
 
         Expression returnValue =  null;
 
-        if (ctx.methodBody().blockBody() != null)
+        if (ctx.methodBody().expressionBody() != null)
         {
-            returnValue = new ExpressionBodyVisitor().visit(ctx.methodBody().blockBody());
+            returnValue = new ExpressionBodyVisitor().visit(ctx.methodBody().expressionBody());
             returnValue.setExpectedReturnType(returnType == EMethodReturnType.INT ? EVariableType.INT : EVariableType.BOOLEAN);
         }
 
@@ -58,8 +60,8 @@ public class MethodDeclarationVisitor extends CzechGrammarBaseVisitor<Method>
 
         for (CzechGrammarParser.MethodParameterContext method : methodParameterContext)
         {
-            EVariableType type = EVariableType.valueOf(method.possibleTypes().getText().toUpperCase());
-
+            //EVariableType type = EVariableType.valueOf(method.possibleTypes().getText().toUpperCase());
+            EVariableType type = EVariableType.getSymbol(method.possibleTypes().getText().toLowerCase(Locale.ROOT));
             String identifier = method.identifier().getText();
 
             methodDeclarationParameter = new MethodDeclarationParameter(type,identifier);

@@ -1,0 +1,8 @@
+{
+    cislo tri rovno 3.
+    cislo minusSest rovno minus 6.
+
+    cislo vysledne rovno tri krat minusSest.
+    vysledne rovno (3 plus 3 plus 3) krat (6 deleno (12 modulo 11 krat tri)).
+
+}

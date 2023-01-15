@@ -1,6 +1,7 @@
 package compilator.visitor;
 
 import compilator.enums.EMethodReturnType;
+import compilator.enums.EOperatorAdditive;
 import compilator.enums.EVariableDeclaration;
 import compilator.enums.EVariableType;
 import compilator.object.Variable;
@@ -137,7 +138,8 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     private boolean isMinusValue(CzechGrammarParser.DecimalVariableContext ctx)
     {
-        if (ctx.decimalSymbol() != null && ctx.decimalSymbol().getText().equals("-"))
+
+        if (ctx.decimalSymbol() != null && ctx.decimalSymbol().getText().equals(EOperatorAdditive.MINUS.getTranslation()))
         {
             return true;
         }

@@ -15,4 +15,13 @@ public enum EVariableType
     public String getTranslation() {
         return translation;
     }
+
+    public static EVariableType getSymbol(String value) {
+        for (EVariableType e : EVariableType.values()) {
+            if (e.translation.equals(value)) {
+                return e;
+            }
+        }
+        return null;
+    }
 }
