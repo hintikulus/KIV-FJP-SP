@@ -1,9 +1,6 @@
 {
     cislo a rovno minus 5.
-    cislo b rovno minus a.
-    cislo d rovno minus (20 minus a).
-    cislo c rovno minus test( minus (20 minus a)).
-
+    cislo c rovno minus test(a).
 
     cislo spageta test(cislo v )
     {
@@ -11,3 +8,4 @@
     }
 
 }
+
