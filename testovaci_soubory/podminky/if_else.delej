@@ -1,0 +1,12 @@
+{
+    cislo a rovno 0.
+    vyrok b rovno nepravda.
+    kdyz (pravda a zaroven b)
+    {
+        a rovno 55.
+    }
+    jinak
+    {
+        a rovno 42.
+    }
+}

@@ -1,0 +1,18 @@
+{
+    cislo a rovno test(8,2).
+
+    cislo spageta test(cislo b, cislo c)
+    {
+        vrat b plus test1(b, c).
+    }
+
+    cislo spageta test1(cislo b, cislo c)
+    {
+        vrat b krat c.
+    }
+}
+
+
+
+
+

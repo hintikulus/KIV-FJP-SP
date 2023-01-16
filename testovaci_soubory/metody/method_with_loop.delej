@@ -1,0 +1,20 @@
+{
+    cislo a rovno 0.
+
+    test(1, 2).
+
+    nic spageta test(cislo b, cislo c)
+    {
+        dokud(a mensi nez 5)
+        {
+            a rovno a plus 1.
+        }
+
+        a rovno b plus c plus a.
+    }
+}
+
+
+
+
+

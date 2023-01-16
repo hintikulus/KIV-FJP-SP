@@ -1,0 +1,10 @@
+// Priklad na cyklus for
+{
+    // Soucet cisel od 0 do 5 - vysledek = 0 + 1 + 2 + 3 + 4 + 5 = 15
+    cislo x rovno 5.
+
+    cislo y rovno 0.
+    pro (i rovno 0 ... x) {
+        y rovno y plus i.
+    }
+}

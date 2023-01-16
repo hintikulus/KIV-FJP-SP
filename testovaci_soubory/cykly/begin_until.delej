@@ -1,0 +1,11 @@
+// Priklad na cyklus begin_until
+// sblizovani dvou cisel
+{
+    cislo x rovno 1.
+    cislo y rovno 10.
+
+    od {
+        x rovno x plus 1.
+        y rovno y minus 1.
+    } do(x vetsi nez y)
+}

@@ -1,0 +1,25 @@
+{
+    cislo a rovno 1.
+    cislo b rovno 2.
+    cislo c rovno 3.
+
+    kdyz (a mensi nez b)
+    {
+        cislo d rovno 5.
+        a rovno a plus d.
+
+        kdyz (a vetsi nez d)
+        {
+            kdyz (a mensi nez d)
+            {
+                cislo f rovno a plus a.
+                c rovno f.
+            }
+            jinak
+            {
+                cislo g rovno 42.
+                c rovno g.
+            }
+        }
+    }
+}

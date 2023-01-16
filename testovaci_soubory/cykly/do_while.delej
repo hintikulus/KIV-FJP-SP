@@ -1,0 +1,8 @@
+// Priklad na cyklus do-while
+// Odpocet od 10 do 0
+{
+    cislo x rovno 10.
+    delej {
+        x rovno x minus 1.
+    } dokud (x nerovno 0)
+}

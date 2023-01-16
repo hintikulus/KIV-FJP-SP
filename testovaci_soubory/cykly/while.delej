@@ -1,0 +1,10 @@
+// Priklad na cyklus while
+// Priklad inkrementuje hodnotu promenne pocet o 1 dokud nebude rovna hodnotě x + 10
+{
+    cislo x rovno 5.
+
+    cislo pocet rovno 0.
+    dokud(pocet mensi nez x plus 10) {
+        pocet rovno pocet plus 1.
+    }
+}

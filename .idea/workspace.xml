@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="">
+    <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="uprava komentaru">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
     </list>
     <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="vedle" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -25,19 +31,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/KIV-FJP-SP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testovaci_soubory/metody" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\david\Documents\GitHub\KIV-FJP-SP\testovaci_soubory\metody" />
+      <recent name="C:\Users\david\Documents\GitHub\KIV-FJP-SP\testovaci_soubory\podminky" />
+      <recent name="C:\Users\david\Documents\GitHub\KIV-FJP-SP\testovaci_soubory\zakladni_aritmetika" />
+      <recent name="C:\dev\KIV-FJP-SP\src\generate" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\KIV-FJP-SP" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="compilator.enums" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/temurin-11.0.17" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="KIV-FJP-SP" />
+      <option name="PROGRAM_PARAMETERS" value="input.txt output.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,8 +71,60 @@
       <workItem from="1666081067789" duration="31000" />
       <workItem from="1666609310941" duration="7200000" />
       <workItem from="1673009358924" duration="104000" />
-      <workItem from="1673009473926" duration="2338000" />
+      <workItem from="1673009473926" duration="2567000" />
+      <workItem from="1673012848010" duration="10140000" />
+      <workItem from="1673765847847" duration="1245000" />
     </task>
+    <task id="LOCAL-00001" summary="uprava jazyka">
+      <created>1673280083615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673280083615</updated>
+    </task>
+    <task id="LOCAL-00002" summary="oprava struktury pro vypisovani chyb">
+      <created>1673282854620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673282854620</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor">
+      <created>1673434851379</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673434851379</updated>
+    </task>
+    <task id="LOCAL-00004" summary="testovaci soubory">
+      <created>1673775820040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673775820040</updated>
+    </task>
+    <task id="LOCAL-00005" summary="testovaci soubory">
+      <created>1673777879047</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673777879047</updated>
+    </task>
+    <task id="LOCAL-00006" summary="testovaci soubory pro metody">
+      <created>1673782596391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673782596391</updated>
+    </task>
+    <task id="LOCAL-00007" summary="uprava komentaru">
+      <created>1673788775941</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673788775941</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -67,5 +140,63 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="uprava jazyka" />
+    <MESSAGE value="oprava struktury pro vypisovani chyb" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="testovaci soubory" />
+    <MESSAGE value="testovaci soubory pro metody" />
+    <MESSAGE value="uprava komentaru" />
+    <option name="LAST_COMMIT_MESSAGE" value="uprava komentaru" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compilator/Compilator.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compilator/visitor/MethodDeclarationVisitor.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compilator/compiler/ExpressionCompiler.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compilator/compiler/ExpressionCompiler.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="compilator.object.statement.StatementDeclaration" memberName="line" />
+        <PinnedItemInfo parentTag="compilator.enums.EVariableDeclaration" memberName="ordinal" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="variable.parallelArray" />
+        <watch expression="variable.variableDeclaration.ordinal" />
+        <watch expression="recognizer.getParseInfo()" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

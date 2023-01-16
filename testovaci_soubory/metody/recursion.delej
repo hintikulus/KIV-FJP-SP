@@ -1,0 +1,16 @@
+{
+
+    cislo a rovno 5.
+    cislo b rovno 0.
+
+    recursion().
+
+    nic spageta recursion()
+    {
+        kdyz (a nerovno b)
+        {
+            b rovno b plus 1.
+            recursion().
+        }
+    }
+}
