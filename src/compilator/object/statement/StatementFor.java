@@ -6,12 +6,12 @@ import compilator.object.control.ControlFor;
 
 public class StatementFor extends Statement {
     /**
-     * For loop head
+     * Ridici konstrukce cyklu
      */
     private final ControlFor controlFor;
 
     /**
-     * For loop body
+     * Telo for cyklu
      */
     private final BlockStatement body;
 

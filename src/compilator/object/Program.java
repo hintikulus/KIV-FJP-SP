@@ -1,7 +1,7 @@
 package compilator.object;
 
 /**
- * Represent of program in internal structure
+ * Reprezentace programu ve vnitrtni strukture
  */
 public class Program {
 

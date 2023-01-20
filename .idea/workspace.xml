@@ -6,7 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="e29c793e-2bae-4a06-a8ff-fef6b8435b6d" name="Changes" comment="uprava komentaru">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/Compilator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/Compilator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/ErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/InstructionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/InstructionGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compiler/BaseCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compiler/BaseCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compiler/BlockCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compiler/BlockCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compiler/BlockStatementCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compiler/BlockStatementCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compiler/ExpressionCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compiler/ExpressionCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compiler/MethodCallCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compiler/MethodCallCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/compiler/MethodCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/compiler/MethodCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/BlockStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/BlockStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/StatementData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/StatementData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/Variable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/control/ControlFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/control/ControlFor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/expression/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/expression/Expression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/instruction/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/instruction/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/method/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/method/MethodCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/method/MethodCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/method/MethodCallParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/method/MethodCallParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/method/MethodDeclarationParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/method/MethodDeclarationParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/method/MethodPrototype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/method/MethodPrototype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/Statement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/Statement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementAssigment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementAssigment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementFor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementIf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementMethodCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementMethodCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementRepeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementRepeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementSwitchBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementSwitchBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilator/object/statement/StatementWhile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilator/object/statement/StatementWhile.java" afterDir="false" />
     </list>
     <list id="86c540bd-c92c-417f-9416-3941e99be777" name="Changes by david" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +65,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/testovaci_soubory/metody" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.scopes",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\david\Documents\GitHub\KIV-FJP-SP\testovaci_soubory\metody" />
@@ -74,6 +116,8 @@
       <workItem from="1673009473926" duration="2567000" />
       <workItem from="1673012848010" duration="10140000" />
       <workItem from="1673765847847" duration="1245000" />
+      <workItem from="1673858553815" duration="3187000" />
+      <workItem from="1674170268123" duration="10008000" />
     </task>
     <task id="LOCAL-00001" summary="uprava jazyka">
       <created>1673280083615</created>
@@ -140,7 +184,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -157,24 +200,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compilator/Compilator.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/compilator/visitor/MethodDeclarationVisitor.java</url>
           <line>38</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compilator/compiler/ExpressionCompiler.java</url>
-          <line>181</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compilator/compiler/ExpressionCompiler.java</url>
-          <line>198</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

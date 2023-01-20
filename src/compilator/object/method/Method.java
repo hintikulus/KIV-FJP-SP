@@ -8,32 +8,32 @@ import java.util.List;
 
 public class Method {
     /**
-     * Method name
+     * Nazev metody
      */
     private final String identifier;
 
     /**
-     * Method return type
+     * Typ návratove hodnoty
      */
     private final EMethodReturnType returnType;
 
     /**
-     * List of parameters
+     * Seznam parametru
      */
     private final List<MethodDeclarationParameter> parameters;
 
     /**
-     * Method body
+     * Telo metody
      */
     private final BlockStatement body;
 
     /**
-     * Return value
+     * Navratova metoda
      */
     private final Expression returnValue;
 
     /**
-     * Line of method head
+     * Radka deklarace metody
      */
     private int line;
 

@@ -26,10 +26,10 @@ public class Compilator {
     }
 
     /**
-     * Main body of compiler. Process input and create file with PL/0 instructions
+     * Hlavni telo kompilatoru. Zpracovava vstup a vytvari soubor obsahujici PL/0 instrukce
      *
-     * @param input  input file
-     * @param output output file
+     * @param input vstupni soubor
+     * @param output vystupni soubor
      */
     public void run(CharStream input, String output) {
         CzechGrammarLexer lexer = new CzechGrammarLexer(input);
@@ -69,10 +69,10 @@ public class Compilator {
     }
 
     /**
-     * Handles writing to file
+     * Zpracovava zapis do souboru
      *
-     * @param outputFile   output file
-     * @param instructions instructions list
+     * @param outputFile   vystupni soubor
+     * @param instructions seznam instrukci
      */
     private void writeInstructions(String outputFile, List<Instruction> instructions) {
         PrintWriter writer = null;

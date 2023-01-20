@@ -9,57 +9,57 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represent of variable in internal structure
+ * Reprezentace promennych v interni strukture
  */
 public class Variable {
 
     /**
-     * Variable name
+     * Nazev promenne
      */
     private String name;
 
     /**
-     * Variable value
+     * Hodnota promenne
      */
     private Value value;
 
     /**
-     * Is variable constant indication
+     * Je promenna oznacena jako konstantni?
      */
     private boolean isConstant;
 
     /**
-     * Variable expression value
+     * Promenna vyrazu
      */
     private Expression expression;
 
     /**
-     * Variable type
+     * Typ promenne
      */
     private EVariableType type;
 
     /**
-     * List of parallel declared variables
+     * Seznam paralelnich deklaraci
      */
     private List<String> parallelArray;
 
     /**
-     * Variable method call value
+     * Hodnota promenne hodnoty volani metody
      */
     private MethodCall methodCall;
 
     /**
-     * How was variable declared indication
+     * Jak byla promenna deklarovana?
      */
     private EVariableDeclaration variableDeclaration;
 
     /**
-     * indication if variable was declared with minus symbol
+     * Byla promenna deklarovana se symbolem minus?
      */
     private boolean isDeclaredWithMinus = false;
 
     /**
-     * On which line was variable declared
+     * Na jake radce byla promenna deklarovana?
      */
     private int line;
 

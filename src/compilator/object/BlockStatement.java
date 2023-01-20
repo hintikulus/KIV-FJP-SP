@@ -5,17 +5,17 @@ import compilator.object.method.Method;
 import java.util.List;
 
 /**
- * Represent of BlockStatement in internal structure
+ * Reprezentace bloku prikazu pro reprezentaci vnitrni struktury
  */
 public class BlockStatement {
 
     /**
-     * Statement data
+     * Data prikazu
      */
     private StatementData statementData;
 
     /**
-     * List of declared methods
+     * Seznam deklarovanych metod
      */
     private List<Method> methods;
 

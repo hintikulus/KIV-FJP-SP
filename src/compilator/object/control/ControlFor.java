@@ -4,17 +4,17 @@ import compilator.object.expression.Expression;
 
 public class ControlFor {
     /**
-     * Identifier for iteration
+     * Identifikator iterace
      */
     private final String identifier;
 
     /**
-     * From value expression
+     * Vyraz z hodnoty
      */
     private Expression expression;
 
     /**
-     * To value expression
+     * Hodnota vyrazu
      */
     private Expression to;
 

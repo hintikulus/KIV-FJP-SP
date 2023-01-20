@@ -5,12 +5,12 @@ import compilator.object.expression.Expression;
 
 public class StatementAssigment extends Statement {
     /**
-     * Statement identifier
+     * Identifikator prikazu
      */
     private final String identifier;
 
     /**
-     * Assigned value
+     * Prirazovana hodnota
      */
     private final Expression expression;
 

@@ -5,7 +5,7 @@ import compilator.object.method.MethodCall;
 
 public class StatementMethodCall extends Statement {
     /**
-     * Method call object
+     * Objekt volani metody
      */
     private MethodCall methodCall;
 

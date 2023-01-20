@@ -4,7 +4,7 @@ import compilator.enums.EExpressionType;
 import compilator.enums.EVariableType;
 
 /**
- * Base expression class
+ * Trida pro zpracovani zakladniho vyrazu
  */
 public class Expression {
 
@@ -14,12 +14,12 @@ public class Expression {
     private EExpressionType type;
 
     /**
-     * Expression declaration line
+     * Vyraz deklarativni radky
      */
     private int line;
 
     /**
-     * Expression return type
+     * Vyraz navratoveho typu
      */
     private EVariableType expectedReturnType;
 

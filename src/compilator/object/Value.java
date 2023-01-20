@@ -1,8 +1,7 @@
 package compilator.object;
 
 /**
- * Stores all types of values
- * In getting you have to know what you want (Variable type)
+ * Ulozeni vsech typu hodnot
  */
 public class Value {
     final private Object value;

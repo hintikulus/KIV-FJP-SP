@@ -19,7 +19,7 @@ public class MethodCompiler extends BaseCompiler {
     }
 
     /**
-     * Processes method into instructions
+     * Zpracovani metody na instrukce
      */
     private void processMethod() {
         // kontrola jestli metoda existuje v tabulce symbolu
@@ -67,10 +67,10 @@ public class MethodCompiler extends BaseCompiler {
     }
 
     /**
-     * Adds method to symbol table and increase stack
+     * Prida metodu do tabulky symbolu a navysi zasobnik
      *
-     * @param methodSize     size for symbol table item (full size)
-     * @param baseMethodSize base size (default size + parameters count)
+     * @param methodSize     velikost pro symbol
+     * @param baseMethodSize velikost s paramametry
      */
     private void addMethodToSymbolTable(int methodSize, int baseMethodSize) {
         SymbolTableItem symbolTableItem = new SymbolTableItem(this.method.getIdentifier(), 0, this.getInstructionsCounter(), methodSize);
@@ -84,7 +84,7 @@ public class MethodCompiler extends BaseCompiler {
     }
 
     /**
-     * Method load parameters from top of stack and stores them
+     * Nacteni parametru z vrchnolu zasobniku a jejich ulozeni
      */
     private void loadParametersFromStack() {
         List<MethodDeclarationParameter> parameters = this.method.getParameters();
@@ -107,7 +107,7 @@ public class MethodCompiler extends BaseCompiler {
     }
 
     /**
-     * Removes parameters from Symbol table
+     * Odstraneni symbolu z tabulky
      */
     private void deleteParametersFromSymbolOfTable() {
         for (MethodDeclarationParameter parameter : this.method.getParameters()) {

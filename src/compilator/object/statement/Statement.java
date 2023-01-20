@@ -3,17 +3,17 @@ package compilator.object.statement;
 import compilator.enums.EStatementType;
 
 /**
- * Base statement class
+ * Zakladni trida pro prikazy
  */
 public class Statement {
 
     /**
-     * Statement type
+     * Typ prikazu
      */
     private EStatementType type;
 
     /**
-     * Statement declaration line
+     * Radka deklaritivniho prikazu
      */
     private int line;
 

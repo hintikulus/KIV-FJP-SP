@@ -6,12 +6,12 @@ import compilator.object.expression.Expression;
 
 public class StatementRepeat extends Statement {
     /**
-     * Loop condition
+     * Podminka cyklu
      */
     private final Expression expression;
 
     /**
-     * Loop body
+     * Telo cyklu
      */
     private final BlockStatement body;
 

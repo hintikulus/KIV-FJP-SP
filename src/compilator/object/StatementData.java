@@ -8,21 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Holds data of Statement
+ * Data prikazu
  */
 public class StatementData {
     /**
-     * List of declared statements
+     * Seznam deklarovanych konstrukci
      */
     private List<Statement> statements;
 
     /**
-     * List with names of declared variables
+     * Seznam s nazvy deklarovanych promennych
      */
     private List<String> variableNames;
 
     /**
-     * Number of for cycles in statements
+     * Pocet for cyklu v konstrukcich
      */
     private int forStatementCount = 0;
 
@@ -32,7 +32,7 @@ public class StatementData {
     }
 
     /**
-     * Number of parallel declared variables
+     * Pocet paralelne vytvorenych promennych
      *
      * @return
      */
@@ -41,7 +41,7 @@ public class StatementData {
     }
 
     /**
-     * Creates list with names of declared variables
+     * Vytvori seznam jmen deklarovanych promennych
      *
      * @return
      */

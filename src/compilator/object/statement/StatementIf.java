@@ -6,17 +6,17 @@ import compilator.object.expression.Expression;
 
 public class StatementIf extends Statement {
     /**
-     * Condition expression
+     * Podminkovy vyraz
      */
     private final Expression expression;
 
     /**
-     * If body
+     * Blok podminky
      */
     private final BlockStatement bodyIf;
 
     /**
-     * Else body
+     * Blok podminkove negativni vetve
      */
     private final BlockStatement bodyElse;
 

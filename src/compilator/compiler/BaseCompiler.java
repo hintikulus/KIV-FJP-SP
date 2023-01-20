@@ -12,47 +12,47 @@ import java.util.HashMap;
 
 public class BaseCompiler {
     /**
-     * Instruction list
+     * Seznam instrukci
      */
     protected static ArrayList<Instruction> instructionsList = new ArrayList<>();
 
     /**
-     * Instance of symbol table
+     * Tabulka symbolu
      */
     protected static SymbolTable symbolTable = new SymbolTable();
 
     /**
-     * Instruction counter
+     * Pocitadlo instrukci
      */
     private static int instructionsCounter = 0;
 
     /**
-     * Constant for method default size
+     * Vychozi velikost metody
      */
     protected final int BASE_METHOD_SIZE = 3;
 
     /**
-     * Stack pointer
+     * Zasobnikovy ukazatel
      */
     private static int stackPointer = 3;
 
     /**
-     * Default value of stack pointer
+     * Vychozi hodnota zasobnikového ukazatele
      */
     public final int STACK_POINTER_DEFAULT_VALUE = 3;
 
     /**
-     * List of method prototypes
+     * Seznam prototypu metod
      */
     private static HashMap<String, MethodPrototype> methodPrototype = new HashMap<>();
 
     /**
-     * Instance of error handler
+     * Obsluha chyb
      */
     protected static ErrorController errorController = ErrorController.getInstance();
 
     /**
-     * Adds normal instruction to instruction list
+     * Pridá instrukci do seznamu instrukci
      *
      * @param instruction
      * @param level
@@ -64,7 +64,7 @@ public class BaseCompiler {
     }
 
     /**
-     * Adds method call instruction to instruction list
+     * Prida instrukci pro volani metody do seznamu instrukci
      *
      * @param instruction
      * @param level

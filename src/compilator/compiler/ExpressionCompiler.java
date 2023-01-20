@@ -7,22 +7,22 @@ import compilator.object.symbolTable.SymbolTableItem;
 
 public class ExpressionCompiler extends BaseCompiler {
     /**
-     * Expression to process
+     * Výraz určený pro zpracování
      */
     private final Expression expression;
 
     /**
-     * Level of expression
+     * Hloubka výrazu
      */
     private int level;
 
     /**
-     * Method return type
+     * Návratový typ metody
      */
     private EMethodReturnType methodReturnType;
 
     /**
-     * Exprexted return type
+     * Předpokládaný návratový typ
      */
     private EVariableType resultType;
 
@@ -49,7 +49,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Processes expression into instruction
+     * Zpracovani vyrazu do instrukci
      */
     public void run() {
         EVariableType type = this.processExpression(this.expression);
@@ -63,7 +63,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Expression processing, called recursively
+     * Zpracovani vyrazu volaneho rekurzivne
      *
      * @param expression
      * @return
@@ -110,7 +110,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Identifier expression
+     * Vyraz identifikator
      *
      * @param expression
      * @return
@@ -131,7 +131,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Specific value expression
+     * Konkretni hodnota vyrazu
      *
      * @param expression
      * @return
@@ -151,7 +151,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Multiplication expression
+     * Vyraz nasobeni
      *
      * @param expression
      * @return
@@ -168,7 +168,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Additive expression
+     * Vyraz scitani
      *
      * @param expression
      * @return
@@ -185,7 +185,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Relational Expression
+     * Relacni vyraz
      *
      * @param expression
      * @return
@@ -202,7 +202,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Logical expression
+     * Logicky vyraz
      *
      * @param expression
      * @return
@@ -226,7 +226,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Negation expression
+     * Negace vyrazu
      *
      * @param expression
      * @return
@@ -248,7 +248,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Negation expression
+     * Negace vyrazu
      *
      * @param expression
      * @return
@@ -270,7 +270,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Plus expression
+     * Vyraz scitani
      *
      * @param expression
      * @return
@@ -289,7 +289,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Par expression
+     * Par vyraz
      *
      * @param expression
      * @return
@@ -299,7 +299,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Method call expression
+     * Vyraz volani metody
      *
      * @param expression
      * @return
@@ -324,7 +324,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Checks if return types are same
+     * Kontrola navratovych typu
      *
      * @param type1
      * @param type2
@@ -337,7 +337,7 @@ public class ExpressionCompiler extends BaseCompiler {
     }
 
     /**
-     * Check if type is equal to expected
+     * Kontrola zda je navratovy typ stejny jako predikovany
      *
      * @param type
      * @param expected
