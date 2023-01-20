@@ -1,12 +1,12 @@
 package compilator.object;
 
 /**
- * Represent of block in internal structure
+ * Reprezentace bloku v interni strukture
  */
 public class Block {
 
     /**
-     * BlockStatement data
+     * Blok prikazu
      */
     private BlockStatement blockStatement;
 

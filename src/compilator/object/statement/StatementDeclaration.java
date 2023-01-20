@@ -5,7 +5,7 @@ import compilator.object.Variable;
 
 public class StatementDeclaration extends Statement {
     /**
-     * Declared variable
+     * Deklarace promenne
      */
     private final Variable variable;
 

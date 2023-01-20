@@ -1,13 +1,13 @@
+// Priklad na cyklus for
 {
-    cislo a rovno minus 5.
-    cislo b rovno minus a.
-    cislo d rovno minus (20 minus a).
-    cislo c rovno minus test( minus (20 minus a)).
+    // Soucet cisel od 0 do 5 - vysledek = 0 + 1 + 2 + 3 + 4 + 5 = 15
+    cislo x rovno 5.
 
-
-    cislo spageta test(cislo v )
-    {
-        vrat minus v.
+    cislo y rovno 0.
+    pro (i rovno 0 ... x) {
+        y rovno y plus i.
     }
+
+    y rovno y plus 10
 
 }

@@ -7,22 +7,22 @@ import java.util.List;
 
 public class MethodCall {
     /**
-     * Method name to call
+     * Nazev metody pro volani
      */
     private final String identifier;
 
     /**
-     * Call parameters
+     * Volaci parametry
      */
     private List<MethodCallParameter> parameters;
 
     /**
-     * Which type call should return
+     * Předpokladany navratpvy typ
      */
     private EMethodReturnType expectedReturnType;
 
     /**
-     * On which line was method called
+     * Cislo radky deklarace metody
      */
     private int line;
 
@@ -51,7 +51,7 @@ public class MethodCall {
     }
 
     /**
-     * Converts EMethodReturnType to EVariableType
+     * Prevod EMethodReturnType na EVariableType
      *
      * @return
      */

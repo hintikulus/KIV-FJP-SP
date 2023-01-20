@@ -6,12 +6,12 @@ import compilator.object.expression.Expression;
 
 public class StatementDo extends Statement {
     /**
-     * Loop expression
+     * Vyrok vykklu
      */
     private final Expression expression;
 
     /**
-     * Loop body
+     * Telo cyklu
      */
     private final BlockStatement body;
 

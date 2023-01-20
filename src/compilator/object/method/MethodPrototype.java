@@ -5,12 +5,12 @@ import compilator.enums.EVariableType;
 
 public class MethodPrototype {
     /**
-     * Method name
+     * Nazev metody
      */
     private String name;
 
     /**
-     * Method parameters
+     * Parametry metody
      */
     private EMethodReturnType methodReturnType;
 

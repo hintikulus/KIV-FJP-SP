@@ -20,7 +20,7 @@ public class BlockCompiler extends BaseCompiler {
     }
 
     /**
-     * Generates method prototypes
+     * Vygenerovani prototypu metod
      */
     private void generateMethodsPrototype() {
         List<Method> methods = this.block.getBlockStatement().getMethods();

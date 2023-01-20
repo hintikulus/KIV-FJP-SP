@@ -39,8 +39,7 @@ public class Instruction {
     }
 
     /**
-     * Address is initialized later
-     * used in call instruction
+     * Adresy iniciovane ve volaci instrukci
      *
      * @return
      */

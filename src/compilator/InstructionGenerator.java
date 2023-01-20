@@ -16,9 +16,9 @@ public class InstructionGenerator {
     }
 
     /**
-     * Generate instructions from stored structure
+     * Generovani instrukci z ulozenych struktur
      *
-     * @return list of instructions
+     * @return seznam instrukci
      */
     public List<Instruction> generateInstructions() {
         ProgramCompiler programCompiler = new ProgramCompiler(this.program);

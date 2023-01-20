@@ -7,17 +7,17 @@ import java.util.HashMap;
 
 public class StatementSwitch extends Statement {
     /**
-     * Switch condition
+     * Podminkovy vyraz
      */
     private Expression expression;
 
     /**
-     * Switch blocks
+     * Bloky podminek
      */
     private HashMap<Integer, StatementSwitchBlock> caseBlocks;
 
     /**
-     * Switch default block
+     * Block vychoziho pruchodu
      */
     private final StatementSwitchBlock defaultBlock;
 

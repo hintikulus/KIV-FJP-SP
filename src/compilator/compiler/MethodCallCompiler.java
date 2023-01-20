@@ -8,12 +8,12 @@ import compilator.object.method.MethodCallParameter;
 
 public class MethodCallCompiler extends BaseCompiler {
     /**
-     * Method call object
+     * Object volani metody
      */
     private MethodCall methodCall;
 
     /**
-     * level of call
+     * hloubka volani
      */
     private int level;
 
@@ -23,7 +23,7 @@ public class MethodCallCompiler extends BaseCompiler {
     }
 
     /**
-     * Processes method call to instructions
+     * Zpracovava volani metody na instrukce
      */
     public void run() {
         if (methodCall.getExpectedReturnType() != EMethodReturnType.VOID) {

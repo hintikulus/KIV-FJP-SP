@@ -16,42 +16,42 @@ import java.util.Map;
 
 public class BlockStatementCompiler extends BaseCompiler {
     /**
-     * Block statement instance
+     * Instance bloku prikazu
      */
     private BlockStatement blockStatement;
 
     /**
-     * Block statement data
+     * Data vyrazu
      */
     private StatementData statementData;
 
     /**
-     * level of instructions
+     * Hloubka instrukcí
      */
     private int level;
 
     /**
-     * Should be methods generated
+     * Generovat metody?
      */
     private boolean generateMethods = true;
 
     /**
-     * Should be stack increased
+     * Zvetsovat zasobnik?
      */
     private boolean increaseStack = true;
 
     /**
-     * Should be return generated
+     * Generovat return?
      */
     private boolean generateReturn = true;
 
     /**
-     * Should be local variables deleted
+     * Odstranovat lokalni promenne
      */
     private boolean deleteLocalVariables = false;
 
     /**
-     * Should be allocated space for variables
+     * Alokovane misto pro lokalni promenne
      */
     private boolean createLocalSpaceForLocalVariables = false;
 
@@ -65,7 +65,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Processes block to instructions
+     * Zpracovat blok prikazu na prikazy
      */
     public void run() {
         if (this.blockStatement == null) {
@@ -94,8 +94,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Increase stack for variables
-     * depends on settings
+     * Zvetseni zasobniku na zaklade nastaveni
      */
     private void incrementStackForVariables() {
         // v hlavnim bloku programu
@@ -110,7 +109,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Compile methods to instructions, called after statements
+     * Kompilace metod do instrukci volane po prikazech
      */
     private void generateInstructionForMethods() {
         for (Method method : this.blockStatement.getMethods()) {
@@ -119,7 +118,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Statements processing
+     * Zpracovani prikazu
      */
     private void generateInstructionForStatements() {
         for (Statement statement : this.statementData.getStatements()) {
@@ -156,7 +155,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for variable declaration
+     * Generace instrukci pro deklaraci promennych
      *
      * @param statementDeclaration
      */
@@ -187,7 +186,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Adds variable to symbol table
+     * Prida promennou do tabulky symbolu
      *
      * @param name
      * @param variable
@@ -212,7 +211,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for int variable depends on variable type
+     * Generace instrukci pro celocislelne promenne na zaklade typu nezname
      *
      * @param variable
      */
@@ -234,7 +233,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for boolean variable depends on variable type
+     * Generace instrukci pro pravdivnosti promenne na zaklade typu promenne
      *
      * @param variable
      */
@@ -256,7 +255,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for declaration via assigment
+     * Generace instrukci pro deklaraci pres prirazenu
      *
      * @param variable
      */
@@ -278,7 +277,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate assigment instructions
+     * Generovani prirazovacich instrukci
      *
      * @param statementAssigment
      */
@@ -310,7 +309,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for if statement
+     * Generace podminky pro podminky
      *
      * @param statementIf
      */
@@ -347,7 +346,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for for statement
+     * Generace instrukci pro for konstrukci
      *
      * @param statementFor
      */
@@ -401,7 +400,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instruction for while
+     * Generace promennych pro while cyklus
      *
      * @param statementWhile
      */
@@ -426,7 +425,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate do while instructions
+     * Generace instrsukci pro do-while cyklus
      *
      * @param statementDoWhile
      */
@@ -453,7 +452,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for method call
+     * Generovani instrukci pro volani metody
      *
      * @param statementMethodCall
      */
@@ -463,7 +462,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for repeat until
+     * Generace instrukci pro cyklus before-after
      *
      * @param statementRepeatUntil
      */
@@ -483,7 +482,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Generate instructions for switch
+     * Generace instrukci pro konstrukci switch
      *
      * @param statementSwitch
      */
@@ -541,7 +540,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Update method call address
+     * Uprava adresy pro volani metody
      */
     private void initializeMethodsInInstructions() {
         for (Instruction instruction : this.getInstructionsList()) {
@@ -583,7 +582,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Delete local variables and decrease stack space
+     * Odstraneni lokalnich a snizeni zasobniku
      */
     public void deleteLocalVariables() {
         // kontrola, jestli existuje promenna
@@ -612,7 +611,7 @@ public class BlockStatementCompiler extends BaseCompiler {
     }
 
     /**
-     * Set up settings for all blocks except main block
+     * Nastaveni pro bloky krome hlavniho bloku
      */
     public void setUpInnerBodySettings() {
         this.setGenerateMethods(false);

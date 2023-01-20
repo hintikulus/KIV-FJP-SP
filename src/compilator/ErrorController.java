@@ -17,7 +17,7 @@ public class ErrorController {
     }
 
     /**
-     * Print error message and ends program
+     * Vypis chyby a ukonceni programu
      */
     public void throwError(String message, int line, EErrorCode errorCode) {
         System.out.println("Radka: " + line + " : " + message);

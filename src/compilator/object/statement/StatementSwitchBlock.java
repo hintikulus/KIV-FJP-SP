@@ -4,22 +4,22 @@ import compilator.object.BlockStatement;
 
 public class StatementSwitchBlock {
     /**
-     * Switch block identifier
+     * Identifikator bloku vetvene podminky
      */
     private int identifier;
 
     /**
-     * Switch block body
+     * Telo vetvene podminky
      */
     private final BlockStatement body;
 
     /**
-     * Switch block declared line
+     * Radka bloku deklarace vetvene podminky
      */
     private int line;
 
     /**
-     * Is set default block indication
+     * Jedna se o vychozi blok?
      */
     private boolean isSetDefault = false;
 

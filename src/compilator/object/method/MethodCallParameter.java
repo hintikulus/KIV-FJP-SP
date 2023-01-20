@@ -5,12 +5,12 @@ import compilator.object.expression.Expression;
 
 public class MethodCallParameter {
     /**
-     * Parameter value
+     * Hodnota parametru
      */
     private Expression expression;
 
     /**
-     * Type of parameter
+     * Typ parametru
      */
     private EVariableType variableType;
 
