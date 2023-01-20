@@ -1,14 +1,14 @@
 package compilator.visitor;
 
 import compilator.enums.EVariableType;
-import compilator.object.control.ControlFor;
-import compilator.object.expression.Expression;
+import compilator.model.control.ControlFor;
+import compilator.model.expression.Expression;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
 public class ForControlVisitor extends CzechGrammarBaseVisitor<ControlFor> {
     /**
-     * Visitor for ForControl()
+     * Visitor pro ForControl()
      *
      * @param ctx forControl context
      * @return

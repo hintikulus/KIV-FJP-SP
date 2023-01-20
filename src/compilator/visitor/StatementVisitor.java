@@ -4,12 +4,12 @@ package compilator.visitor;
 import compilator.ErrorController;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
-import compilator.object.BlockStatement;
-import compilator.object.Variable;
-import compilator.object.control.ControlFor;
-import compilator.object.expression.Expression;
-import compilator.object.method.MethodCall;
-import compilator.object.statement.*;
+import compilator.model.BlockStatement;
+import compilator.model.Variable;
+import compilator.model.control.ControlFor;
+import compilator.model.expression.Expression;
+import compilator.model.method.MethodCall;
+import compilator.model.statement.*;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
@@ -20,7 +20,7 @@ import java.util.List;
 public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
 
     /**
-     * Visitor for StatementIf()
+     * Visitor pro StatementIf()
      *
      * @param ctx StatementIf context
      * @return
@@ -43,7 +43,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
     }
 
     /**
-     * visitor for StatementFor()
+     * visitor pro StatementFor()
      *
      * @param ctx StatementFor context
      * @return
@@ -64,7 +64,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
     }
 
     /**
-     * Visitor for StatementWhile()
+     * Visitor pro StatementWhile()
      *
      * @param ctx StatementWhile context
      * @return
@@ -118,7 +118,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
     }
 
     /**
-     * Visitor for StatementRepeat()
+     * Visitor pro StatementRepeat()
      *
      * @param ctx StatementRepeat context
      * @return
@@ -132,7 +132,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
     }
 
     /**
-     * Visitor for StatementMethodCall()
+     * Visitor pro StatementMethodCall()
      *
      * @param ctx StatementMethodCall context
      * @return
@@ -147,7 +147,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
     }
 
     /**
-     * Visitor for StatementAssigment()
+     * Visitor pro StatementAssigment()
      *
      * @param ctx StatementAssigment
      * @return
@@ -161,7 +161,7 @@ public class StatementVisitor extends CzechGrammarBaseVisitor<Statement> {
     }
 
     /**
-     * Visitor for StatementVariableDeclaration
+     * Visitor pro StatementVariableDeclaration
      *
      * @param ctx StatementVariableDeclaration context
      * @return

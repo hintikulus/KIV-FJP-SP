@@ -1,14 +1,6 @@
 // Priklad na cyklus for
 {
     cislo a rovno minus 5.
-    cislo c rovno minus test(a).
-
-    cislo spageta test(cislo v )
-    {
-        vrat minus v.
-    }
-
-    y rovno y plus 10
 
 }
 

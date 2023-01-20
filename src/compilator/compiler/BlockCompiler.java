@@ -1,8 +1,8 @@
 package compilator.compiler;
 
-import compilator.object.Block;
-import compilator.object.method.Method;
-import compilator.object.method.MethodPrototype;
+import compilator.model.Block;
+import compilator.model.method.Method;
+import compilator.model.method.MethodPrototype;
 
 import java.util.List;
 

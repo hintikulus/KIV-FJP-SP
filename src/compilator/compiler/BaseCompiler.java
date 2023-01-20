@@ -2,10 +2,10 @@ package compilator.compiler;
 
 import compilator.ErrorController;
 import compilator.enums.EInstruction;
-import compilator.object.instruction.Instruction;
-import compilator.object.method.MethodCall;
-import compilator.object.method.MethodPrototype;
-import compilator.object.symbolTable.SymbolTable;
+import compilator.model.instruction.Instruction;
+import compilator.model.method.MethodCall;
+import compilator.model.method.MethodPrototype;
+import compilator.model.symbolTable.SymbolTable;
 
 import java.util.ArrayList;
 import java.util.HashMap;

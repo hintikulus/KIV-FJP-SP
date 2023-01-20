@@ -1,15 +1,15 @@
 package compilator.compiler;
 
 import compilator.enums.*;
-import compilator.object.BlockStatement;
-import compilator.object.StatementData;
-import compilator.object.Variable;
-import compilator.object.expression.ExpressionMethodCall;
-import compilator.object.instruction.Instruction;
-import compilator.object.method.Method;
-import compilator.object.method.MethodCall;
-import compilator.object.statement.*;
-import compilator.object.symbolTable.SymbolTableItem;
+import compilator.model.BlockStatement;
+import compilator.model.StatementData;
+import compilator.model.Variable;
+import compilator.model.expression.ExpressionMethodCall;
+import compilator.model.instruction.Instruction;
+import compilator.model.method.Method;
+import compilator.model.method.MethodCall;
+import compilator.model.statement.*;
+import compilator.model.symbolTable.SymbolTableItem;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -286,7 +286,7 @@ public class BlockStatementCompiler extends BaseCompiler {
             SymbolTableItem symbolTableItem = this.getSymbolTable().getItem(statementAssigment.getIdentifier());
 
             if (symbolTableItem.isConstant()) {
-                this.getErrorHandler().throwErrorConstantAssigmentError(symbolTableItem.getName(), statementAssigment.getLine());
+                this.getErrorHandler().throwConstantAssigmentError(symbolTableItem.getName(), statementAssigment.getLine());
             }
 
             // je zde nutne nastavit navratovy typ metody, jelikoz je ve vyssi vrstve gramatiky (stromu) neznamy

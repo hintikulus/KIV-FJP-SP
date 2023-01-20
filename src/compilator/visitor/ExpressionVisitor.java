@@ -1,13 +1,13 @@
 package compilator.visitor;
 
-import compilator.object.expression.Expression;
+import compilator.model.expression.Expression;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
 public class ExpressionVisitor extends CzechGrammarBaseVisitor<Expression> {
 
     /**
-     * Visitor for Expression()
+     * Visitor pro Expression()
      *
      * @param ctx Expression context
      * @return

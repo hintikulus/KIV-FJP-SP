@@ -2,10 +2,10 @@ package compilator.visitor;
 
 import compilator.ErrorController;
 import compilator.enums.*;
-import compilator.object.Value;
-import compilator.object.Variable;
-import compilator.object.expression.Expression;
-import compilator.object.method.MethodCall;
+import compilator.model.Value;
+import compilator.model.Variable;
+import compilator.model.expression.Expression;
+import compilator.model.method.MethodCall;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
@@ -16,7 +16,7 @@ import java.util.Locale;
 public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
 
     /**
-     * Visitor for VariableDeclaration ()
+     * Visitor pro VariableDeclaration()
      *
      * @param ctx VariableDeclaration context
      * @return
@@ -29,19 +29,19 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
         }
         // vytvor konstantni promennou
         else if (ctx.constVariableDeclaration() != null) {
-            return this.createConstantVariable(ctx.constVariableDeclaration());
+            return this.createConstant(ctx.constVariableDeclaration());
         }
 
         return null;
     }
 
     /**
-     * Creates constant variable
+     * Vytvori konstantu
      *
      * @param ctx ConstVariableDeclaration context
      * @return
      */
-    private Variable createConstantVariable(CzechGrammarParser.ConstVariableDeclarationContext ctx) {
+    private Variable createConstant(CzechGrammarParser.ConstVariableDeclarationContext ctx) {
         Variable variable = this.createVariable(ctx.localVariableDeclaration());
         variable.setConstant(true);
 
@@ -49,7 +49,7 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
     }
 
     /**
-     * Creates variable
+     * Vytvori promennou
      *
      * @param ctx LocalVariableDeclaration context
      * @return
@@ -70,7 +70,7 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
     }
 
     /**
-     * Creates decimal variable
+     * Vytvori ciselnou promennou
      *
      * @param ctx DecimalVariable context
      * @return
@@ -136,7 +136,7 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
     }
 
     /**
-     * Creates boolean variable
+     * Vytvori vyrokovou promennou
      *
      * @param ctx BoolVariable context
      * @return
@@ -150,7 +150,7 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
         if (ctx.boolValue().booleanValue() != null) {
             EBooleanValues enumValue = EBooleanValues.getSymbol(ctx.boolValue().booleanValue().getText().toLowerCase(Locale.ROOT));
             if (enumValue == null) {
-                ErrorController.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]", ctx.boolValue().booleanValue().start.getLine(), EErrorCode.ERROR_MISMATCH_TYPES_EXPRESSION);
+                ErrorController.getInstance().throwError("Pri pouziti typu vyrok jsou povolene jen hodnoty [pravda, nepravda]", ctx.boolValue().booleanValue().start.getLine(), EErrorCode.ERROR_COMPILE);
             }
             boolean val = Boolean.parseBoolean(enumValue.toString().toLowerCase(Locale.ROOT));
 
@@ -194,7 +194,7 @@ public class VariableVisitor extends CzechGrammarBaseVisitor<Variable> {
     }
 
     /**
-     * Processes parallel declaration
+     * Zpracuje nasobne prirazeni
      *
      * @param ctx ParalelDeclaration context
      * @return

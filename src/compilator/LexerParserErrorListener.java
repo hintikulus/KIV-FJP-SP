@@ -12,7 +12,7 @@ public class LexerParserErrorListener extends BaseErrorListener {
     @Override
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e)
             throws ParseCancellationException {
-        ErrorController.getInstance().throwError("chyba pri zpracovani radky. " + msg, line, EErrorCode.ERROR_ANTLR_PROCESS);
+        ErrorController.getInstance().throwError("chyba pri zpracovani radky. " + msg, line, EErrorCode.ERROR_ANTLR);
     }
 
     public static LexerParserErrorListener getInstance() {

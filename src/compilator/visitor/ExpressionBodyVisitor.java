@@ -1,9 +1,9 @@
 package compilator.visitor;
 
 import compilator.enums.*;
-import compilator.object.Value;
-import compilator.object.expression.*;
-import compilator.object.method.MethodCall;
+import compilator.model.Value;
+import compilator.model.expression.*;
+import compilator.model.method.MethodCall;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 

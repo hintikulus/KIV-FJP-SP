@@ -1,17 +1,17 @@
 package compilator.visitor;
 
-import compilator.object.Block;
-import compilator.object.BlockStatement;
+import compilator.model.Block;
+import compilator.model.BlockStatement;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
 public class BlockVisitor extends CzechGrammarBaseVisitor<Block> {
 
     /**
-     * Visitor for Block
+     * Visitor pro Block
      *
      * @param ctx Block context
-     * @return internal structure of Block
+     * @return interni struktura Block
      */
     @Override
     public Block visitBlock(CzechGrammarParser.BlockContext ctx) {

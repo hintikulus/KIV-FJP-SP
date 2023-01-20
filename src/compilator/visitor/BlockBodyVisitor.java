@@ -1,8 +1,8 @@
 package compilator.visitor;
 
-import compilator.object.BlockStatement;
-import compilator.object.StatementData;
-import compilator.object.statement.Statement;
+import compilator.model.BlockStatement;
+import compilator.model.StatementData;
+import compilator.model.statement.Statement;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
@@ -11,10 +11,10 @@ import java.util.List;
 
 public class BlockBodyVisitor extends CzechGrammarBaseVisitor<BlockStatement> {
     /**
-     * Visitor for BlockBody
+     * Visitor pro BlockBody
      *
-     * @param ctx blockBody context
-     * @return internal structure BlockStatement
+     * @param ctx block body kontext
+     * @return interni struktura BlockStatement
      */
     public BlockStatement visitBlockBody(CzechGrammarParser.BlockBodyContext ctx) {
         if (ctx == null) {
@@ -27,10 +27,9 @@ public class BlockBodyVisitor extends CzechGrammarBaseVisitor<BlockStatement> {
     }
 
     /**
-     * Processes all statements in blockBody();
+     * Zpracuje vsechny statementy blockBody();
      *
-     * @param statementContextList list of statements
-     * @return internal list of statements
+     * @return seznam statementu
      */
     private List<Statement> getStatements(List<CzechGrammarParser.StatementContext> statementContextList) {
         List<Statement> statements = new ArrayList<>();

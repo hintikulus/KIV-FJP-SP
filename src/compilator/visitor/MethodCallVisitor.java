@@ -1,8 +1,8 @@
 package compilator.visitor;
 
-import compilator.object.expression.Expression;
-import compilator.object.method.MethodCall;
-import compilator.object.method.MethodCallParameter;
+import compilator.model.expression.Expression;
+import compilator.model.method.MethodCall;
+import compilator.model.method.MethodCallParameter;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 

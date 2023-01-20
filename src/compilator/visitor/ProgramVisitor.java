@@ -1,13 +1,13 @@
 package compilator.visitor;
 
-import compilator.object.Program;
+import compilator.model.Program;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
 public class ProgramVisitor extends CzechGrammarBaseVisitor<Program> {
 
     /**
-     * Visitor for Program()
+     * Visitor pro Program()
      *
      * @param ctx Program context
      * @return

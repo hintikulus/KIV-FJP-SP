@@ -11,7 +11,7 @@ public class Main {
         printInfo();
         if (args.length != 2) {
             printUse();
-            System.exit(EErrorCode.ERROR_INVALID_USE.getCode());
+            System.exit(EErrorCode.ERROR_RUNTIME.getCode());
         }
 
         String input = args[0];
@@ -23,7 +23,7 @@ public class Main {
 
         } catch (Exception e) {
             System.out.println("Vstupni soubor nenalezen " + input);
-            System.exit(EErrorCode.ERROR_LOADING_INPUT_FILE.getCode());
+            System.exit(EErrorCode.ERROR_IO.getCode());
         }
         System.out.println("Vstupni soubor: " + input);
         Compilator.getInstance().run(inputStream, output);

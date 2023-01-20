@@ -1,9 +1,9 @@
 package compilator.visitor;
 
-import compilator.object.BlockStatement;
-import compilator.object.StatementData;
-import compilator.object.method.Method;
-import compilator.object.statement.Statement;
+import compilator.model.BlockStatement;
+import compilator.model.StatementData;
+import compilator.model.method.Method;
+import compilator.model.statement.Statement;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 

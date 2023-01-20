@@ -1,22 +1,7 @@
-0	JMP	0	1       // skok na 1. instrukci v programu
-1	INT	0	5
-2	LIT	0	5       //  |
-3	LIT	0	-1      //  promenna a
-4	OPR	0	4       //  |
-5	STO	0	3       //  |
-6	INT	0	1       //  -
-7	LOD	0	3       //  - nacte -5 ze zasobniku a prida ji na vrchol
-8	CAL	0	14      //  - skok na adresu 14 - metoda test
-9	STO	0	-1      // uklid parametru na vrcholu zasobniku po volane metody test
-10	LIT	0	-1      //
-11	OPR	0	4       // Nasobeni navratove hodnoty -1
-12	STO	0	4       //
-13	RET	0	0       // konec programu
-14	INT	0	4       // pocate metody test
-15	LOD	0	-1      // nactu hodnotu 1. parametru
-16	STO	0	3       // ulozim na adresu 3
-17	LOD	0	3       //
-18	LIT	0	-1      // - nasobeni parametru minus 1 - telo metody
-19	OPR	0	4       //
-20	STO	0	-2      // Ulozi navratovou hodnotu na zasobnik
-21	RET	0	0       // konec metody, navrat na instrukci 9
+0	JMP	0	1
+1	INT	0	4
+2	LIT	0	5
+3	LIT	0	-1
+4	OPR	0	4
+5	STO	0	3
+6	RET	0	0

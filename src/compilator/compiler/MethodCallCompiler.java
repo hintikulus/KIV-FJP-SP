@@ -3,12 +3,12 @@ package compilator.compiler;
 import compilator.enums.EInstruction;
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
-import compilator.object.method.MethodCall;
-import compilator.object.method.MethodCallParameter;
+import compilator.model.method.MethodCall;
+import compilator.model.method.MethodCallParameter;
 
 public class MethodCallCompiler extends BaseCompiler {
     /**
-     * Object volani metody
+     * Objekt volani metody
      */
     private MethodCall methodCall;
 

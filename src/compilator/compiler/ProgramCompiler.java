@@ -1,7 +1,7 @@
 package compilator.compiler;
 
 import compilator.enums.EInstruction;
-import compilator.object.Program;
+import compilator.model.Program;
 
 public class ProgramCompiler extends BaseCompiler {
 

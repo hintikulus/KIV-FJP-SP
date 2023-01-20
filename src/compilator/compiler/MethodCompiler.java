@@ -1,9 +1,9 @@
 package compilator.compiler;
 
 import compilator.enums.EInstruction;
-import compilator.object.method.Method;
-import compilator.object.method.MethodDeclarationParameter;
-import compilator.object.symbolTable.SymbolTableItem;
+import compilator.model.method.Method;
+import compilator.model.method.MethodDeclarationParameter;
+import compilator.model.symbolTable.SymbolTableItem;
 
 import java.util.List;
 

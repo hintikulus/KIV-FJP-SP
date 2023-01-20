@@ -1,9 +1,9 @@
 package compilator.compiler;
 
 import compilator.enums.*;
-import compilator.object.Value;
-import compilator.object.expression.*;
-import compilator.object.symbolTable.SymbolTableItem;
+import compilator.model.Value;
+import compilator.model.expression.*;
+import compilator.model.symbolTable.SymbolTableItem;
 
 public class ExpressionCompiler extends BaseCompiler {
     /**

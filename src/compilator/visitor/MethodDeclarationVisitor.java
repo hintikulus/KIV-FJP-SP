@@ -2,10 +2,10 @@ package compilator.visitor;
 
 import compilator.enums.EMethodReturnType;
 import compilator.enums.EVariableType;
-import compilator.object.BlockStatement;
-import compilator.object.expression.Expression;
-import compilator.object.method.Method;
-import compilator.object.method.MethodDeclarationParameter;
+import compilator.model.BlockStatement;
+import compilator.model.expression.Expression;
+import compilator.model.method.Method;
+import compilator.model.method.MethodDeclarationParameter;
 import parser.CzechGrammarBaseVisitor;
 import parser.CzechGrammarParser;
 
