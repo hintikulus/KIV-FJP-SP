@@ -41,7 +41,7 @@ public class Main {
 
     public static void printUse() {
         System.out.println("Spatne pouziti programu.");
-        System.out.println("Spoustejte prosim s nasjedujicimi parametry:");
+        System.out.println("Spoustejte prosim s nasledujicimi parametry:");
         System.out.println("java -jar Delej.jar <vstupni soubor> <vystupni soubor>");
     }
 }
